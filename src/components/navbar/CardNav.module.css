@@ -1,0 +1,436 @@
+/* ==========================================================================
+   CardNav CSS Module - Bulletproof Scoped Styling for Next.js App Router
+   ========================================================================== */
+
+/* Outer Root Container */
+.root {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: var(--cn-bar, 60px);
+  width: 100%;
+  max-width: var(--cn-max, 800px);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+/* Expanding Glass/Solid Panel */
+.panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  height: var(--cn-bar, 60px);
+  overflow: hidden;
+  border-radius: var(--cn-radius, 18px);
+  background: var(--cn-panel);
+  box-shadow: var(--cn-shadow);
+  -webkit-backdrop-filter: var(--cn-blur, blur(20px) saturate(1.6));
+  backdrop-filter: var(--cn-blur, blur(20px) saturate(1.6));
+  box-sizing: border-box;
+}
+
+/* Inner Rim Highlight & Subtle Border */
+.rim {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px var(--cn-edge), inset 0 1px 0 var(--cn-highlight);
+}
+
+/* Top Navigation Bar */
+.bar {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  display: grid;
+  height: var(--cn-bar, 60px);
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding-left: var(--cn-inset, 8px);
+  padding-right: var(--cn-inset, 8px);
+}
+
+.root[data-narrow] .bar {
+  grid-template-columns: auto 1fr auto;
+}
+
+/* Menu Toggle Button */
+.menu {
+  display: inline-flex;
+  height: calc(var(--cn-bar, 60px) - var(--cn-inset, 8px) * 2);
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+  justify-self: start;
+  border-radius: calc(var(--cn-radius, 18px) - var(--cn-inset, 8px));
+  border: 0;
+  padding-left: 16px;
+  padding-right: 14px;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: var(--cn-text);
+  outline: none;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.menu:hover {
+  background: var(--cn-hover);
+}
+
+.menu:focus-visible {
+  outline: 2px solid var(--cn-ring);
+  outline-offset: 2px;
+}
+
+.menu[data-icon-only] {
+  width: calc(var(--cn-bar, 60px) - var(--cn-inset, 8px) * 2);
+  justify-content: center;
+  padding: 0;
+}
+
+.root[data-narrow] .menu {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+/* Hamburger Icon */
+.burger {
+  position: relative;
+  height: 12px;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.lineTop,
+.lineBottom {
+  position: absolute;
+  left: 0;
+  height: 1.5px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: currentColor;
+  transition: top 0.45s cubic-bezier(0.22, 1, 0.36, 1), transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lineTop {
+  top: 2.25px;
+}
+
+.lineBottom {
+  top: 8.25px;
+}
+
+.root[data-open] .lineTop {
+  top: 5.25px;
+  transform: rotate(45deg);
+}
+
+.root[data-open] .lineBottom {
+  top: 5.25px;
+  transform: rotate(-45deg);
+}
+
+/* Menu Text Label */
+.menuLabel {
+  position: relative;
+  display: inline-grid;
+  overflow: hidden;
+}
+
+.wordOpen,
+.wordClose {
+  grid-area: 1 / 1;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wordOpen {
+  transform: translateY(0);
+}
+
+.wordClose {
+  transform: translateY(110%);
+}
+
+.root[data-open] .wordOpen {
+  transform: translateY(-110%);
+}
+
+.root[data-open] .wordClose {
+  transform: translateY(0);
+}
+
+/* Logo */
+.logo {
+  display: inline-flex;
+  height: var(--cn-logo, 30px);
+  align-items: center;
+  justify-self: center;
+  color: var(--cn-text);
+  text-decoration: none;
+  outline: none;
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--cn-ring);
+  outline-offset: 2px;
+}
+
+.logo img,
+.logo svg {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+.root[data-narrow] .logo {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  padding-left: 14px;
+}
+
+/* CTA Button */
+.cta {
+  display: inline-flex;
+  height: calc(var(--cn-bar, 60px) - var(--cn-inset, 8px) * 2);
+  justify-self: end;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: calc(var(--cn-radius, 18px) - var(--cn-inset, 8px));
+  border: 0;
+  padding: 0 18px;
+  background: var(--cn-cta);
+  box-shadow: var(--cn-cta-shadow);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--cn-cta-ink);
+  text-decoration: none;
+  outline: none;
+  transition: filter 0.2s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.cta:hover {
+  filter: var(--cn-cta-hover);
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--cn-ring);
+  outline-offset: 2px;
+}
+
+.ctaWide {
+  display: flex;
+  height: 44px;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: calc(var(--cn-radius, 18px) - var(--cn-inset, 8px));
+  border: 0;
+  padding: 0 16px;
+  background: var(--cn-cta);
+  box-shadow: var(--cn-cta-shadow);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--cn-cta-ink);
+  text-decoration: none;
+  outline: none;
+  transition: filter 0.2s ease;
+}
+
+.ctaWide:hover {
+  filter: var(--cn-cta-hover);
+}
+
+.ctaWide:focus-visible {
+  outline: 2px solid var(--cn-ring);
+  outline-offset: 2px;
+}
+
+/* Dropdown Content Area */
+.content {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--cn-bar, 60px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--cn-gap, 8px);
+  padding-left: var(--cn-inset, 8px);
+  padding-right: var(--cn-inset, 8px);
+  padding-bottom: var(--cn-inset, 8px);
+  perspective: 900px;
+}
+
+.root[data-shown] .content {
+  visibility: visible;
+}
+
+/* Cards Container */
+.cards {
+  display: flex;
+  gap: var(--cn-gap, 8px);
+  width: 100%;
+}
+
+.root[data-narrow] .cards {
+  flex-direction: column;
+}
+
+/* Individual Dropdown Card */
+.card {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  min-height: var(--cn-card, 176px);
+  min-width: 0;
+  flex: 1 1 0;
+  transform-origin: top;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: calc(var(--cn-radius, 18px) - var(--cn-inset, 8px));
+  padding: 16px 16px 14px;
+  background: var(--cn-tile);
+  box-shadow: var(--cn-tile-rim);
+  color: var(--cn-text);
+  will-change: transform, opacity;
+}
+
+.card[data-tinted] {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16), 0 4px 10px -4px rgba(0, 0, 0, 0.45);
+}
+
+.root[data-narrow] .card {
+  min-height: 0;
+  flex: none;
+  gap: 10px;
+  padding: 14px 14px 12px;
+}
+
+.cardHead {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.description {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--cn-muted);
+}
+
+.card[data-tinted] .description {
+  color: inherit;
+  opacity: 0.7;
+}
+
+/* Links inside Cards */
+.links {
+  margin: 0;
+  margin-top: auto;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+}
+
+.root[data-narrow] .links {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 4px;
+}
+
+.link {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px;
+  border: 0;
+  padding: 3px 0;
+  background: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.82;
+  outline: none;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--cn-ring);
+  outline-offset: 2px;
+}
+
+/* Arrow Icon Animation */
+.arrow {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.arrowOut {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.arrowIn {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  transform: translate(-110%, 110%);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link:hover .arrowOut,
+.link:focus-visible .arrowOut {
+  transform: translate(110%, -110%);
+}
+
+.link:hover .arrowIn,
+.link:focus-visible .arrowIn {
+  transform: translate(0, 0);
+}

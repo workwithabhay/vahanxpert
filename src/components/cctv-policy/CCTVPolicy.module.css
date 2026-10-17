@@ -1,0 +1,357 @@
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #18181b;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  .pageWrapper {
+    padding-top: 160px;
+    padding-bottom: 120px;
+  }
+}
+
+/* Ambient Lighting Glows (Identical to other policy pages) */
+.ambientGlowTop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 95vw);
+  height: 520px;
+  background: radial-gradient(ellipse at top, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.02) 55%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambientGlowMid {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(900px, 90vw);
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.04) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Centered Main Container - Single Column, No Sidebar */
+.container {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Back Link */
+.backLinkRow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #71717a;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(244, 244, 245, 0.7);
+  border: 1px solid #e4e4e7;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: #b45309;
+  border-color: #fde68a;
+  background: #fef3c7;
+}
+
+/* Header Section (Centered) */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b45309;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.badgeDot {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #18181b;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+  max-width: 740px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Meta Pills Row */
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.metaPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #57534e;
+}
+
+.metaPillPrimary {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+/* Content Column (Centered, Max Width) */
+.contentArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section Card */
+.sectionCard {
+  background: #ffffff;
+  border: 1px solid #f0eeea;
+  border-radius: 20px;
+  padding: 24px 22px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .sectionCard {
+    padding: 30px 32px;
+  }
+}
+
+.sectionCard:hover {
+  border-color: #fcd34d;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.06);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.sectionNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 0.85rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.sectionTitle {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #18181b;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+}
+
+.sectionBody {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+  margin-top: 9px;
+  flex-shrink: 0;
+}
+
+/* Contact Card */
+.contactCard {
+  background: linear-gradient(180deg, #fffdfa 0%, #fffbf2 100%);
+  border: 1px solid #fde68a;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.06);
+}
+
+@media (min-width: 768px) {
+  .contactCard {
+    padding: 34px 36px;
+  }
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+@media (min-width: 640px) {
+  .contactGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #fef3c7;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.contactIcon {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+/* Document Control Table */
+.docTableWrapper {
+  overflow-x: auto;
+  margin-top: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.docTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.docTable th,
+.docTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.docTable th {
+  background: #fafaf9;
+  font-weight: 700;
+  color: #374151;
+  width: 35%;
+}
+
+.docTable td {
+  color: #1f2937;
+  font-weight: 500;
+  background: #ffffff;
+}
+
+.docTable tr:last-child th,
+.docTable tr:last-child td {
+  border-bottom: none;
+}

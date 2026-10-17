@@ -1,0 +1,571 @@
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #18181b;
+  overflow-x: hidden;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding-top: 130px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .pageWrapper {
+    padding-top: 160px;
+    padding-bottom: 120px;
+  }
+}
+
+/* Atmospheric Ambient Background */
+.ambientGlowTop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1000px, 95vw);
+  height: 500px;
+  background: radial-gradient(ellipse at top, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.02) 55%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambientGlowMid {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(850px, 90vw);
+  height: 480px;
+  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Common Section Header Typography (Always Centered) */
+.sectionHeader {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 52px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b45309;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.badgeIcon {
+  color: #f59e0b;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #09090b;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 60%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #52525b;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Centered)
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #09090b;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #52525b;
+  max-width: 740px;
+  margin: 0 auto 36px auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.heroCtas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #09090b;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.primaryBtn:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.45);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #18181b;
+  border: 1px solid #e4e4e7;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.secondaryBtn:hover {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. WHAT EXACTLY IS A CLAIM? (Centered Card)
+   ========================================================================== */
+.whatClaimSection {
+  position: relative;
+  padding: 70px 0;
+}
+
+.claimInfoCard {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 28px;
+  padding: 44px 32px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .claimInfoCard {
+    padding: 56px 48px;
+  }
+}
+
+.claimParagraph {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #52525b;
+  margin: 0 0 20px 0;
+  text-align: center;
+  max-width: 760px;
+}
+
+.claimParagraphHighlight {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: #71717a;
+  background: #fafafa;
+  border-left: 3px solid #f59e0b;
+  padding: 14px 20px;
+  border-radius: 0 12px 12px 0;
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+/* ==========================================================================
+   3. ACCIDENT HO GAYA? PEHLE YE KARO (4 Steps Centered)
+   ========================================================================== */
+.accidentStepsSection {
+  position: relative;
+  padding: 80px 0;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stepsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stepCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 22px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.1);
+}
+
+.stepNumber {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #d97706;
+  background: #fef3c7;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #09090b;
+  margin: 0 0 12px 0;
+  text-align: center;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   4. CASHLESS VS REIMBURSEMENT (Comparison Cards)
+   ========================================================================== */
+.comparisonSection {
+  position: relative;
+  padding: 80px 0 100px 0;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.compareCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 26px;
+  padding: 40px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.compareCardFeatured {
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.08);
+}
+
+.compareCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.12);
+}
+
+.compareTag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.compareTagGold {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.compareTagNeutral {
+  background: #f4f4f5;
+  color: #52525b;
+  border: 1px solid #e4e4e7;
+}
+
+.compareTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #09090b;
+  margin: 0 0 14px 0;
+  text-align: center;
+}
+
+.compareDesc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0 0 28px 0;
+  text-align: center;
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #27272a;
+}
+
+.checkIcon {
+  color: #d97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   5. BOTTOM CTA BANNER (Existing Theme)
+   ========================================================================== */
+.ctaSection {
+  position: relative;
+  padding: 40px 0 60px 0;
+}
+
+.ctaCard {
+  position: relative;
+  background: linear-gradient(135deg, #18181b 0%, #09090b 100%);
+  border-radius: 28px;
+  padding: 56px 36px;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaGlow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.ctaEyebrow {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fbbf24;
+  margin-bottom: 12px;
+}
+
+.ctaTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .ctaTitle {
+    font-size: 2.75rem;
+  }
+}
+
+.ctaDesc {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #a1a1aa;
+  max-width: 620px;
+  margin: 0 auto 32px auto;
+  text-align: center;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.ctaGoldBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #09090b;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.ctaGoldBtn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.45);
+}
+
+.ctaSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.ctaSecondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}

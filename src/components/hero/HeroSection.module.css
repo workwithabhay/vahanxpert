@@ -1,0 +1,491 @@
+/* ==========================================================================
+   Hero Section - Razorpay-Inspired Layout in Golden-Yellowish Vexo Theme
+   With Seamless 3D Studio Stage & Feathered Edge Blending
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+  overflow: hidden;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #18181b;
+  display: flex;
+  align-items: center;
+}
+
+.lightBeam1,
+.lightBeam2 {
+  display: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* ==========================================================================
+   Left Column: Copy & Conversion Block
+   ========================================================================== */
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #b45309;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.eyebrowBar {
+  width: 3.5px;
+  height: 1.15rem;
+  background: #f59e0b;
+  border-radius: 2px;
+}
+
+.headline {
+  font-size: clamp(2.35rem, 4.4vw, 3.7rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #09090b;
+  margin: 0 0 1.5rem;
+}
+
+.headlineHighlight {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 60%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.asterisk {
+  color: #d97706;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+.subheadline {
+  font-size: clamp(0.98rem, 1.7vw, 1.12rem);
+  color: #52525b;
+  line-height: 1.6;
+  margin: 0 0 2rem;
+  font-weight: 450;
+}
+
+/* Action CTAs in One Row */
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+/* Primary CTA: Simple, High-Impact & Rock-Solid */
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  color: #ffffff;
+  min-height: 50px;
+  padding: 14px 28px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.45), 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  user-select: none;
+  outline: none;
+}
+
+.primaryBtn:hover {
+  background: linear-gradient(135deg, #09090b 0%, #18181b 100%);
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 14px 28px -8px rgba(0, 0, 0, 0.55), 0 0 20px rgba(245, 158, 11, 0.22);
+}
+
+.btnArrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.primaryBtn:hover .btnArrow {
+  transform: translateX(3px);
+}
+
+.trustBadgesRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f4f4f5;
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #52525b;
+}
+
+.trustIcon {
+  color: #f59e0b;
+}
+
+/* ==========================================================================
+   Right Column: Unified 3D Stage Composition (Eliminates the Cut Look)
+   ========================================================================== */
+
+.rightCol {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  width: 100%;
+}
+
+/* The Unified 3D Stage: An expansive rounded backdrop frame that envelopes
+   the entire lower and side composition so the cutout looks intentionally anchored */
+.stageCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  min-height: 540px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Right-Side Angled Parallelogram Banner (Razorpay Style) */
+.angledBannerWrapper {
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  width: 290px;
+  height: 450px;
+  background: linear-gradient(145deg, #f59e0b 0%, #d97706 65%, #b45309 100%);
+  transform: skewX(-14deg);
+  border-radius: 22px;
+  box-shadow:
+    0 20px 45px -10px rgba(217, 119, 6, 0.45),
+    0 8px 18px -4px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2.2rem 1.6rem;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.bannerGlare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.bannerContent {
+  transform: skewX(14deg);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.bannerHeadline {
+  font-size: 2.35rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.bannerSubline {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fef08a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  text-shadow: 0 2px 8px rgba(180, 83, 9, 0.5);
+}
+
+.groundShadow {
+  position: absolute;
+  bottom: 8px;
+  left: 14%;
+  right: -2%;
+  height: 48px;
+  background:
+    radial-gradient(ellipse 65% 35% at 50% 65%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 75%),
+    radial-gradient(ellipse 85% 45% at 50% 60%, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
+  filter: blur(8px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Pop-out Foreground Mechanic with Open-hood VW - Shifted right */
+.mechanicImageWrapper {
+  position: relative;
+  z-index: 4;
+  width: 505px;
+  max-width: 100%;
+  margin-left: 55px;
+  /* Shifted slightly more to the right */
+  margin-bottom: -5px;
+  pointer-events: none;
+  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.2));
+}
+
+/* ==========================================================================
+   Smooth Floor Transition (Complements the smoothstep-baked alpha PNG)
+   ========================================================================== */
+.mechanicImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Ultra smooth transition to ensure the boots rest seamlessly on the showroom floor */
+  mask-image: linear-gradient(to bottom, black 0%, black 92%, rgba(0, 0, 0, 0.4) 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 92%, rgba(0, 0, 0, 0.4) 97%, transparent 100%);
+}
+
+/* Rotating "LIMITED PERIOD OFFER" Circular Stamp */
+.stampWrapper {
+  position: absolute;
+  bottom: 18px;
+  right: -12px;
+  width: 140px;
+  height: 140px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stampCircle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px dashed #f59e0b;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stampSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stampCenter {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #92400e;
+  font-weight: 900;
+  font-size: 0.82rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.stampHighlight {
+  color: #d97706;
+  font-size: 0.95rem;
+}
+
+/* Floating interactive badges positioned to anchor the composition */
+.floatingBadge1 {
+  position: absolute;
+  top: 15%;
+  left: 15px;
+  /* Shifted nicely with the car */
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 14px;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 12px 28px -6px rgba(217, 119, 6, 0.28);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 7;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #78350f;
+}
+
+.floatingBadge2 {
+  position: absolute;
+  bottom: 9%;
+  left: 20px;
+  /* Shifted nicely with the car */
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 14px;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  z-index: 7;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.activeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  box-shadow: 0 0 8px #16a34a;
+}
+
+.tcApply {
+  position: absolute;
+  bottom: -22px;
+  right: 15px;
+  font-size: 0.72rem;
+  color: #a1a1aa;
+  font-style: italic;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .leftCol {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+  .ctaRow {
+    justify-content: center;
+  }
+
+  .trustBadgesRow {
+    justify-content: center;
+  }
+
+  .rightCol {
+    min-height: 520px;
+  }
+
+  .stageCanvas {
+    max-width: 480px;
+  }
+
+  .mechanicImageWrapper {
+    width: 440px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .headline {
+    font-size: 2.15rem;
+  }
+
+  .subheadline {
+    font-size: 0.95rem;
+  }
+
+  .stageCanvas {
+    max-width: 320px;
+    min-height: 420px;
+  }
+
+  .mechanicImageWrapper {
+    width: 320px;
+    margin-left: 0;
+  }
+
+  .angledBannerWrapper {
+    width: 200px;
+    height: 340px;
+    right: 0;
+    padding: 1.4rem 0.9rem;
+  }
+
+  .bannerHeadline {
+    font-size: 1.65rem;
+  }
+
+  .bannerSubline {
+    font-size: 0.85rem;
+  }
+
+  .stampWrapper {
+    width: 100px;
+    height: 100px;
+    bottom: 5px;
+    right: 0;
+  }
+
+  .floatingBadge1,
+  .floatingBadge2 {
+    display: none;
+  }
+}

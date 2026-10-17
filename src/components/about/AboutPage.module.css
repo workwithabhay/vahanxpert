@@ -1,0 +1,762 @@
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #18181b;
+  overflow-x: hidden;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   Ambient Atmospheric Glows
+   ========================================================================== */
+.ambientGlowTop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1000px, 95vw);
+  height: 500px;
+  background: radial-gradient(ellipse at top, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.02) 55%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambientGlowMid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(800px, 90vw);
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.05) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+/* Common Section Header Typography (Always Centered) */
+.sectionHeader {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 52px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b45309;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.badgeIcon {
+  color: #f59e0b;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #09090b;
+  letter-spacing: -0.025em;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 60%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sectionSubtitle {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #52525b;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (Centered)
+   ========================================================================== */
+.heroSection {
+  position: relative;
+  padding: 130px 0 60px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 160px 0 80px 0;
+  }
+}
+
+.heroContent {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #09090b;
+  letter-spacing: -0.03em;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3.75rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #52525b;
+  max-width: 740px;
+  margin: 0 auto 36px auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.heroCtas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #18181b;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.primaryBtn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #18181b;
+  border: 1px solid #e4e4e7;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.secondaryBtn:hover {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. STATS SECTION (Centered Cards)
+   ========================================================================== */
+.statsSection {
+  position: relative;
+  padding: 20px 0 80px 0;
+  background-color: #ffffff;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+.statCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.08);
+}
+
+.statNumber {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #09090b;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .statNumber {
+    font-size: 2.75rem;
+  }
+}
+
+.statNumberGold {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #71717a;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* ==========================================================================
+   3. OVERVIEW / YOUR CAR. OUR EXPERTISE. (Centered)
+   ========================================================================== */
+.overviewSection {
+  position: relative;
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.overviewContent {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overviewTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #09090b;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .overviewTitle {
+    font-size: 2.75rem;
+  }
+}
+
+.overviewDesc {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #52525b;
+  margin: 0 0 36px 0;
+  text-align: center;
+  max-width: 720px;
+}
+
+.overviewPillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.overviewPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #27272a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.overviewPill:hover {
+  border-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.1);
+}
+
+.pillCheckIcon {
+  color: #d97706;
+}
+
+/* ==========================================================================
+   4. WHO WE ARE SECTION (All Centered)
+   ========================================================================== */
+.whoSection {
+  position: relative;
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+.whoContent {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.whoParagraph {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #52525b;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  max-width: 760px;
+}
+
+.whoList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px 20px;
+  margin: 24px auto 36px auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .whoList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.whoListItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #27272a;
+  background: #fafafa;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid #e4e4e7;
+  transition: all 0.2s ease;
+}
+
+.whoListItem:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: #ffffff;
+}
+
+.whoListIcon {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   5. WHAT WE DO (4 CARDS GRID - All Centered)
+   ========================================================================== */
+.whatSection {
+  position: relative;
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.serviceCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.1);
+}
+
+.serviceStepNum {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #d97706;
+  background: #fef3c7;
+  padding: 4px 12px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.serviceTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #09090b;
+  margin: 0 0 12px 0;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.serviceDesc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0 0 24px 0;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #09090b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-top: auto;
+}
+
+.cardLink:hover {
+  color: #d97706;
+}
+
+/* ==========================================================================
+   6. MISSION & VISION SECTION (Centered)
+   ========================================================================== */
+.missionSection {
+  position: relative;
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .missionGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.missionCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.missionCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 16px 36px rgba(245, 158, 11, 0.08);
+}
+
+.missionTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #d97706;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.missionHeading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #09090b;
+  margin: 0 0 14px 0;
+  text-align: center;
+}
+
+.missionText {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #52525b;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.missionPointsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.missionPointItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #27272a;
+}
+
+/* ==========================================================================
+   7. HOW IT WORKS (Centered Steps)
+   ========================================================================== */
+.howSection {
+  position: relative;
+  padding: 90px 0;
+  background-color: #ffffff;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .stepsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stepCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  padding: 32px 24px;
+  position: relative;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.08);
+}
+
+.stepNumber {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #e4e4e7;
+  line-height: 1;
+  margin-bottom: 16px;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.stepCard:hover .stepNumber {
+  color: #f59e0b;
+}
+
+.stepTitle {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #09090b;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   8. WHY VAHANXPERT (Centered Pillars)
+   ========================================================================== */
+.whySection {
+  position: relative;
+  padding: 90px 0 120px 0;
+  background-color: #ffffff;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pillarCard {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 20px;
+  padding: 32px 24px;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 12px 28px rgba(245, 158, 11, 0.08);
+}
+
+.pillarIconWrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #fffbeb;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d97706;
+  margin-bottom: 20px;
+}
+
+.pillarTitle {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #09090b;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.pillarDesc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0;
+  text-align: center;
+}

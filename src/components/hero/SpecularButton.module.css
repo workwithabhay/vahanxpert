@@ -1,0 +1,80 @@
+.specularButton {
+  position: relative;
+  isolation: isolate;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #fafafa !important;
+  border-radius: var(--sb-radius, 18px);
+  background-color: var(--sb-tint, #18181b) !important;
+  box-shadow: 0 10px 24px -14px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2);
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.specularButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px -10px rgba(0, 0, 0, 0.6), 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.specularButton:active {
+  transform: scale(0.97);
+}
+
+.specularButton:disabled {
+  cursor: default;
+  opacity: 0.5;
+  transform: none;
+}
+
+/* Sizing scales */
+.sizeSm {
+  padding: 10px 20px;
+  font-size: 0.875rem;
+  min-height: 38px;
+}
+
+.sizeMd {
+  padding: 13px 26px;
+  font-size: 0.95rem;
+  min-height: 44px;
+}
+
+.sizeLg {
+  padding: 15px 32px;
+  font-size: 1.025rem;
+  min-height: 50px;
+}
+
+/* WebGL Specular Canvas Overlay */
+.canvas {
+  pointer-events: none;
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  width: calc(100% + 48px);
+  height: calc(100% + 48px);
+  z-index: 1;
+  display: block;
+}
+
+/* Foreground content above canvas */
+.content {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  pointer-events: none;
+  color: #fafafa;
+}

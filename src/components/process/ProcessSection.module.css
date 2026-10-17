@@ -1,0 +1,365 @@
+/* ==========================================================================
+   ProcessSection CSS Module - 5-Step Process in One Row with Golden Theme
+   ========================================================================== */
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 6.5rem 1.5rem 6.5rem;
+  background-color: #0c0a09;
+  background-image: 
+    radial-gradient(circle at 50% 0px, rgba(245, 158, 11, 0.16) 0%, rgba(217, 119, 6, 0.06) 45%, transparent 75%),
+    linear-gradient(180deg, #09090b 0%, #0c0a09 50%, #09090b 100%);
+  color: #f4f4f5;
+  overflow: hidden;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.topBorderGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.5) 50%, transparent 100%);
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 450px;
+  background: radial-gradient(ellipse, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.badgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.95rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fbbf24;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+}
+
+.title {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: #a1a1aa;
+  line-height: 1.6;
+}
+
+/* Timeline Connection Bar (Desktop) */
+.timelineBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  right: 3rem;
+  height: 2px;
+  background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+  opacity: 0.3;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.timelineStep {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #18181b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fbbf24;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stepDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+/* 5 Cards in One Row Container */
+.rowContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Front Card Overlay Styling */
+.frontOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 40%, rgba(9, 9, 11, 0.92) 100%);
+  border-radius: inherit;
+  z-index: 2;
+}
+
+.frontTopBadge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.stepNumberPill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: #f59e0b;
+  color: #000000;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+}
+
+.hoverHint {
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #e4e4e7;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.frontBottomInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.frontTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.frontTagline {
+  font-size: 0.78rem;
+  color: #fbbf24;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+/* Back Card Styling (Revealed on hover / flip) */
+.backCard {
+  width: 100%;
+  height: 100%;
+  background: #141118;
+  background-image: 
+    radial-gradient(circle at 50% 15%, rgba(245, 158, 11, 0.18) 0%, transparent 65%),
+    linear-gradient(180deg, #18151f 0%, #100e14 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: inherit;
+  padding: 1.4rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.backHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.backBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #f59e0b;
+}
+
+.durationPill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+}
+
+.backTitle {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.backDescription {
+  font-size: 0.78rem;
+  color: #a1a1aa;
+  line-height: 1.45;
+  margin: 0 0 0.85rem;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.75rem;
+  color: #e4e4e7;
+  line-height: 1.35;
+}
+
+.checkIcon {
+  color: #f59e0b;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.backFooter {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guaranteeBadge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #f59e0b;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* User Experience Helper / Hint underneath */
+.footerHint {
+  margin-top: 2.75rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hintPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(245, 158, 11, 0.3);
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: #d4d4d8;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1180px) {
+  .rowContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .timelineBar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4.5rem 1rem 5rem;
+  }
+
+  .rowContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .rowContainer {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}

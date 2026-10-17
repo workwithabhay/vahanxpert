@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 28px;
+  background-color: var(--spotlight-card-surface, #ffffff);
+  box-shadow: var(--spotlight-card-shadow, 0 1px 2px rgba(24, 24, 27, 0.04), 0 18px 40px -20px rgba(24, 24, 27, 0.16));
+  box-sizing: border-box;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.08), 0 24px 48px -18px rgba(217, 119, 6, 0.18);
+}
+
+.lightLayer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.grainLayer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  border-radius: inherit;
+  background-size: 160px 160px;
+  opacity: 0;
+  mix-blend-mode: overlay;
+}
+
+.borderLayer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--spotlight-card-border, rgba(245, 158, 11, 0.18));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+.edgeLayer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  padding: 1px;
+  opacity: 0;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}

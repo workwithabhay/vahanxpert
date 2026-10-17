@@ -1,0 +1,478 @@
+/* ==========================================================================
+   Footer Component - Zomato-Inspired Architecture with Golden Vexo Theme
+   ========================================================================== */
+
+.footer {
+  position: relative;
+  background-color: #09090b;
+  color: #f4f4f5;
+  width: 100%;
+  padding: 5rem 1.5rem 0;
+  overflow: hidden;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Golden Shimmer Top Border */
+.topBorderGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(245, 158, 11, 0.6) 50%, transparent 100%);
+}
+
+.ambientAura {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 250px;
+  background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Top Header Row: Logo & Regional Selectors
+   ========================================================================== */
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.brandLogo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footerLogoImg {
+  height: 48px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.brandLogo:hover .footerLogoImg {
+  opacity: 0.92;
+  transform: scale(1.02);
+}
+
+.logoText {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.logoDot {
+  color: #f59e0b;
+}
+
+/* Country & Language Selector Buttons (Zomato style) */
+.selectorsGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.selectorButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e4e4e7;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.selectorButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(245, 158, 11, 0.4);
+  color: #ffffff;
+}
+
+.dropdownArrow {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-left: 0.25rem;
+}
+
+/* ==========================================================================
+   Main Links Grid (5-Column Layout matching Zomato)
+   ========================================================================== */
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr)) 1.8fr 1fr;
+  gap: 2.5rem 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.contactIconWrapper {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #f59e0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.contactItem:hover .contactIconWrapper {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fbbf24;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+.contactLink {
+  font-size: 0.88rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+  word-break: break-word;
+}
+
+.contactLink:hover {
+  color: #fbbf24;
+}
+
+.columnTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+}
+
+.linkAnchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.linkAnchor:hover {
+  color: #fbbf24;
+  transform: translateX(4px);
+}
+
+.linkBadge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Social Links & App Store Column (Rightmost column)
+   ========================================================================== */
+
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.socialIconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.socialIconBtn:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  color: #09090b;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+}
+
+.appButtonsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 175px;
+}
+
+.appButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0.45rem 0.95rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.appButton:hover {
+  border-color: rgba(245, 158, 11, 0.6);
+  background: #121016;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.appButtonIcon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.appButtonText {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.appSubtitle {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  line-height: 1.1;
+}
+
+.appTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   Divider & Legal Notice
+   ========================================================================== */
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.bottomLegal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.disclaimerText {
+  font-size: 0.78rem;
+  color: #71717a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.copyrightRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.78rem;
+  color: #71717a;
+  padding-top: 0.5rem;
+}
+
+.securityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #a1a1aa;
+}
+
+.greenDot {
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #22c55e;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .linksGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .contactColumn {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+  }
+
+  .contactColumn {
+    grid-column: span 2;
+  }
+
+  .socialColumn {
+    grid-column: span 2;
+  }
+
+  .appButtonsGroup {
+    flex-direction: row;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 3.5rem 1rem 0;
+  }
+
+  .topRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .socialColumn {
+    grid-column: span 1;
+  }
+
+  .appButtonsGroup {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================================
+   Very Bottom Center Image - Flush to Bottom (No Space)
+   ========================================================================== */
+
+.bottomImageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+.bottomImage {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0;
+  vertical-align: bottom;
+}

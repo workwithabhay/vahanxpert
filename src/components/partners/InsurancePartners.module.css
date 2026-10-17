@@ -1,0 +1,727 @@
+/* ==========================================================================
+   Insurance Partners Section - Golden Yellowish Theme
+   ========================================================================== */
+
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6.5rem 1.5rem 4rem;
+  background-color: #fffdf9;
+  background-image: 
+    radial-gradient(circle at 50% 120px, rgba(254, 240, 138, 0.35) 0%, rgba(253, 224, 71, 0.18) 35%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(180deg, #fffdf8 0%, #fffbf2 50%, #fffdf8 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-plus-jakarta), var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1c1917;
+}
+
+/* Ambient luminous golden auras */
+.ambientGlow {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 720px;
+  height: 480px;
+  background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.22) 0%, rgba(251, 191, 36, 0.12) 45%, rgba(255, 255, 255, 0) 75%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambientGlowSecondary {
+  position: absolute;
+  bottom: 40px;
+  right: 10%;
+  width: 450px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(254, 240, 138, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Header & Typography
+   ========================================================================== */
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  max-width: 720px;
+}
+
+.badgePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.95rem;
+  background: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #92400e;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.08);
+}
+
+.badgeDot {
+  color: #d97706;
+  font-size: 0.85rem;
+}
+
+.title {
+  font-size: clamp(2.35rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleRegular {
+  color: #78350f;
+}
+
+.titleGold {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 50%, #92400e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 4px 18px rgba(245, 158, 11, 0.2);
+}
+
+.subtitle {
+  font-size: clamp(1.02rem, 2vw, 1.18rem);
+  color: #57534e;
+  line-height: 1.6;
+  max-width: 580px;
+  margin: 0 auto;
+  font-weight: 450;
+}
+
+/* ==========================================================================
+   Visual Stage: Phone Mockup & Surrounding Floating Cards
+   ========================================================================== */
+
+.stage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  margin-top: 0.5rem;
+}
+
+/* Columns for desktop layout */
+.cardsColumn {
+  position: relative;
+  width: 320px;
+  height: 520px;
+  flex-shrink: 0;
+}
+
+.cardsColumnLeft {
+  margin-right: 1.5rem;
+}
+
+.cardsColumnRight {
+  margin-left: 1.5rem;
+}
+
+.phoneColumn {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Phone Mockup Styling (Modern iPhone aesthetic)
+   ========================================================================== */
+
+.phoneWrapper {
+  position: relative;
+  width: 310px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+}
+
+.phoneChassis {
+  position: relative;
+  width: 300px;
+  height: 550px;
+  background: #18181b;
+  border-radius: 46px;
+  box-shadow: 
+    0 0 0 3px #27272a,
+    0 0 0 6px #09090b,
+    0 24px 64px -14px rgba(120, 53, 15, 0.28),
+    0 35px 80px -20px rgba(0, 0, 0, 0.45);
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.screenGlare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 65%);
+  pointer-events: none;
+  z-index: 10;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+}
+
+.dynamicIsland {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 24px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.cameraLens {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #0f172a;
+  box-shadow: inset 0 0 2px #38bdf8;
+}
+
+.sensorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1e1b4b;
+}
+
+.phoneScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(254, 243, 199, 0.5) 0%, rgba(255, 255, 255, 0.95) 75%),
+    linear-gradient(180deg, #fffdfa 0%, #fffcf5 100%);
+  border-radius: 38px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1c1917;
+  padding: 2px 8px 0;
+  margin-bottom: 2rem;
+  z-index: 15;
+}
+
+.statusTime {
+  letter-spacing: -0.02em;
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.batteryIcon {
+  width: 18px;
+  height: 9px;
+  border: 1.5px solid #1c1917;
+  border-radius: 3px;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.batteryLevel {
+  width: 75%;
+  height: 100%;
+  background: #f59e0b;
+  border-radius: 1px;
+}
+
+.appHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.appBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.75rem;
+  background: rgba(254, 240, 138, 0.45);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #92400e;
+}
+
+.goldSparkle {
+  color: #d97706;
+}
+
+/* Center Card inside Phone */
+.phoneCenterCard {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 
+    0 14px 34px -8px rgba(217, 119, 6, 0.16),
+    0 4px 14px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(245, 158, 11, 0.1);
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.phoneCardIconContainer {
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 8px 16px rgba(245, 158, 11, 0.25));
+}
+
+.phoneCardTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350f;
+  margin-bottom: 0.45rem;
+  line-height: 1.25;
+}
+
+.phoneCardSubtitle {
+  font-size: 0.8rem;
+  color: #78716c;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.phoneCardTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  background: #fef3c7;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #92400e;
+}
+
+.activeDot {
+  width: 6px;
+  height: 6px;
+  background: #16a34a;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #16a34a;
+}
+
+.phoneBottomPreview {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.partnerAvatars {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.avatarPill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #f5f5f4;
+  color: #57534e;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e7e5e4;
+}
+
+.avatarPillMore {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background: #fef08a;
+  color: #854d0e;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.homeIndicator {
+  width: 100px;
+  height: 4px;
+  background: #18181b;
+  border-radius: 999px;
+  margin: 0 auto 4px;
+}
+
+/* ==========================================================================
+   Partner Badge Floating Cards (Exact Match to Reference Style)
+   ========================================================================== */
+
+.card {
+  position: absolute;
+  width: 132px;
+  height: 132px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 0.85rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(245, 158, 11, 0.14);
+  box-shadow: 
+    0 16px 36px -8px rgba(217, 119, 6, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.03),
+    0 0 1px 1px rgba(245, 158, 11, 0.06);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+  animation: floatMotion 4.8s ease-in-out infinite;
+  z-index: 6;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 
+    0 24px 44px -10px rgba(217, 119, 6, 0.22),
+    0 8px 18px rgba(0, 0, 0, 0.06),
+    0 0 0 2px rgba(245, 158, 11, 0.3);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.cardGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: radial-gradient(circle at 50% 25%, rgba(254, 240, 138, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Precise spatial positioning matching the screenshot's floating arrangement */
+.pos_tl-outer {
+  top: 40px;
+  left: 0;
+}
+
+.pos_tl-inner {
+  top: 10px;
+  right: 15px;
+}
+
+.pos_bl-outer {
+  bottom: 80px;
+  left: 10px;
+}
+
+.pos_bl-inner {
+  bottom: 120px;
+  right: 0;
+}
+
+.pos_tr-inner {
+  top: 15px;
+  left: 15px;
+}
+
+.pos_tr-outer {
+  top: 35px;
+  right: 0;
+}
+
+.pos_br-inner {
+  bottom: 120px;
+  left: 5px;
+}
+
+.pos_br-outer {
+  bottom: 75px;
+  right: 10px;
+}
+
+/* Icon / Placeholder image slot */
+.iconWrapper {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.iconSvg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 10px rgba(245, 158, 11, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.card:hover .iconSvg {
+  transform: scale(1.08);
+}
+
+.placeholderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderBadge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  background: #fef3c7;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #92400e;
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.imageContainer {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.partnerImg {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .partnerImg {
+  transform: scale(1.06);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partnerName {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #292524;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.partnerHighlight {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #b45309;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* Floating dynamic motion */
+@keyframes floatMotion {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ==========================================================================
+   Mobile Grid & Responsive Breakpoints
+   ========================================================================== */
+
+.mobileCardsGrid {
+  display: none;
+}
+
+.helperFooter {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.helperTip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.25rem;
+  background: #fffbeb;
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: 12px;
+  font-size: 0.82rem;
+  color: #78350f;
+  line-height: 1.4;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.06);
+}
+
+.helperIcon {
+  font-size: 1rem;
+}
+
+.codeSnippet {
+  background: #fef3c7;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: #92400e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1060px) {
+  .stage {
+    gap: 1rem;
+  }
+  
+  .cardsColumn {
+    width: 270px;
+  }
+  
+  .card {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .iconWrapper {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .partnerName {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 860px) {
+  /* On medium / small screens, switch floating cards to responsive grid below phone */
+  .cardsColumn {
+    display: none;
+  }
+
+  .stage {
+    min-height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .phoneWrapper {
+    height: 500px;
+    width: 290px;
+  }
+
+  .phoneChassis {
+    height: 490px;
+    width: 280px;
+  }
+
+  .mobileCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 680px;
+    margin: 1.5rem auto 0;
+  }
+
+  .mobileCard {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    height: 130px;
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3.5rem 1rem 3rem;
+  }
+
+  .mobileCardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    max-width: 340px;
+  }
+
+  .mobileCard {
+    height: 120px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}

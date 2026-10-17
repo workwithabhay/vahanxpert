@@ -1,0 +1,317 @@
+/* ==========================================================================
+   FAQ Section - Centered Layout with Golden-Yellowish Vexo Theme
+   ========================================================================== */
+
+.faqSection {
+  position: relative;
+  width: 100%;
+  padding: 6.5rem 1.5rem;
+  background-color: #fafafa;
+  background-image: 
+    radial-gradient(ellipse 60% 40% at 50% 10%, rgba(254, 243, 199, 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 50% 90%, rgba(253, 230, 138, 0.3) 0%, transparent 65%);
+  overflow: hidden;
+  font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #18181b;
+}
+
+.ambientGlow1 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Centered Header (Eyebrow, Headline, Subheading)
+   ========================================================================== */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(254, 243, 199, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #b45309;
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.12);
+}
+
+.eyebrowIcon {
+  color: #f59e0b;
+  font-size: 0.95rem;
+}
+
+.headline {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #09090b;
+  margin: 0 0 1rem;
+}
+
+.headlineHighlight {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subheadline {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #52525b;
+  margin: 0;
+  max-width: 580px;
+}
+
+/* ==========================================================================
+   Centered Accordion Container
+   ========================================================================== */
+
+.accordionWrapper {
+  width: 100%;
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.accordionCard {
+  background: #ffffff;
+  border: 1px solid rgba(228, 228, 231, 0.85);
+  border-radius: 18px;
+  padding: 0.5rem 1.45rem;
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.accordionCard:hover {
+  border-color: rgba(245, 158, 11, 0.45);
+  box-shadow: 0 8px 22px -6px rgba(217, 119, 6, 0.12);
+  transform: translateY(-1px);
+}
+
+.accordionCard[data-state="open"] {
+  border-color: rgba(245, 158, 11, 0.55);
+  background: linear-gradient(180deg, #ffffff 0%, rgba(254, 252, 246, 0.85) 100%);
+  box-shadow: 
+    0 12px 28px -8px rgba(217, 119, 6, 0.16),
+    0 0 0 1px rgba(245, 158, 11, 0.15);
+}
+
+.accordionTriggerBtn {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #18181b;
+  padding: 1.25rem 0;
+  transition: color 0.2s ease;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+}
+
+.accordionTriggerBtn:hover {
+  color: #b45309;
+}
+
+.accordionCard[data-state="open"] .accordionTriggerBtn {
+  color: #92400e;
+}
+
+/* Panel Answer Body */
+.answerContent {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding-bottom: 0.85rem;
+}
+
+.highlightPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(254, 243, 199, 0.7);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #92400e;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 0.85rem;
+}
+
+/* ==========================================================================
+   Centered Support Banner (Bottom)
+   ========================================================================== */
+
+.supportBanner {
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  box-shadow: 
+    0 14px 32px -10px rgba(217, 119, 6, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.supportBannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.supportIcon {
+  font-size: 1.6rem;
+}
+
+.supportBannerTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #18181b;
+  margin: 0;
+}
+
+.supportBannerDesc {
+  font-size: 0.86rem;
+  color: #71717a;
+  margin: 0.15rem 0 0;
+}
+
+.supportBannerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.supportCallBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #18181b;
+  color: #ffffff;
+  padding: 0.7rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.supportCallBtn:hover {
+  background: #09090b;
+  transform: translateY(-1px);
+}
+
+.supportWhatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: #25d366;
+  color: #ffffff;
+  padding: 0.7rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.supportWhatsappBtn:hover {
+  background: #20ba5a;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .faqSection {
+    padding: 4.5rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+
+  .headline {
+    font-size: 2rem;
+  }
+
+  .subheadline {
+    font-size: 0.95rem;
+  }
+
+  .accordionCard {
+    padding: 0.4rem 1.15rem;
+  }
+
+  .accordionTriggerBtn {
+    font-size: 0.98rem;
+    padding: 1.05rem 0;
+  }
+
+  .answerContent {
+    font-size: 0.9rem;
+  }
+
+  .supportBanner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .supportBannerLeft {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .supportBannerActions {
+    width: 100%;
+    justify-content: center;
+  }
+}
