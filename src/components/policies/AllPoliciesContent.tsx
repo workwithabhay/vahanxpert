@@ -177,141 +177,170 @@ export const ALL_POLICIES_DATA: PolicyItem[] = [
       'Approvals may be signed, digital or through authorised communication.',
       'Unauthorised material work should not be performed.',
     ],
-    link: 'https://www.vahanxpert.in/policies/Repair_Approval_Additional_Work_Authorization_Policy/',
-  },
-  {
-    id: '13',
-    title: 'Repair & Parts Warranty Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Warranty may apply to eligible repair work and spare parts.',
-      'Warranty conditions and exclusions are applicable.',
-      'Manufacturer or supplier warranty terms may also apply.',
-      'Warranty claims may require inspection and supporting records.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Repair_Parts_Warranty_Policy/',
-  },
-  {
-    id: '14',
-    title: 'Spare Parts Inventory & Stock Management Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Parts inventory is recorded and appropriately stored.',
-      'Stock movements and parts issued to vehicles are tracked.',
-      'Defective or damaged stock is segregated where required.',
-      'Inventory may be periodically counted and reconciled.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Spare_Parts_Inventory_Stock_Management_Policy/',
-  },
-  {
-    id: '15',
-    title: 'Spare Parts Procurement, Replacement & Return Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Parts are selected according to vehicle and repair requirements.',
-      'Customer approval may be required before procurement.',
-      'Defective or incorrect parts are handled through applicable procedures.',
-      'Unused parts may be returned subject to applicable conditions.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Spare_Parts_Procurement_Replacement_Return_Policy/',
-  },
-  {
-    id: '16',
-    title: 'Staff / Technician Code of Conduct Policy',
-    category: 'Safety & Workshop',
-    points: [
-      'Staff are expected to act professionally and honestly.',
-      'Customer information and property must be handled confidentially.',
-      'Unauthorised vehicle use, payment diversion and record manipulation are prohibited.',
-      'Workshop safety and operational procedures must be followed.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Staff_Technician_Code_of_Conduct_Policy/',
-  },
-  {
-    id: '17',
-    title: 'Vehicle Abandoned / Uncollected Vehicle Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Reasonable attempts are made to contact Customers regarding uncollected vehicles.',
-      'Written notice may be issued where appropriate.',
-      'Applicable storage charges may apply under valid terms.',
-      'Vehicles are not sold or disposed of without an appropriate lawful basis.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Abandoned_Uncollected_Vehicle_Policy/',
-  },
-  {
-    id: '18',
-    title: 'Vehicle Damage, Loss & Incident Reporting Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Vehicle condition is recorded during intake and custody.',
-      'Damage, loss, theft or other incidents should be reported promptly.',
-      'Customers may be notified regarding material incidents.',
-      'Relevant evidence and records may be preserved.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Damage_Loss_Incident_Reporting_Policy/',
-  },
-  {
-    id: '19',
-    title: 'Vehicle Delivery & Handover Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Vehicle readiness and final inspection are completed before delivery.',
-      'Payment and applicable documentation are verified.',
-      'Keys, documents and accessories are handed over appropriately.',
-      'Handover details and recipient information are recorded.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Delivery_Handover_Policy/',
-  },
-  {
-    id: '20',
-    title: 'Vehicle Inspection, Road Test & Test Drive Safety Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Vehicles are inspected before authorised road tests.',
-      'Road tests follow defined safety and driving requirements.',
-      'Customer test drives require appropriate consent and controls.',
-      'Accidents or damage during testing are reported and documented.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Inspection_Road_Test_Test_Drive_Safety_Policy/',
-  },
-  {
-    id: '21',
-    title: 'Vehicle Job Card & Work Authorization Policy',
-    category: 'Customer & Privacy',
-    points: [
-      'A job card records the Customer concern and requested work.',
-      'Vehicle condition and inspection findings are documented.',
-      'Initial and additional work requires appropriate authorisation.',
-      'Job cards are updated and closed after completion.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Job_Card_Work_Authorization_Policy/',
-  },
-  {
-    id: '22',
-    title: 'Vehicle Key, Customer Property & Vehicle Custody Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Vehicle keys are recorded and stored securely.',
-      'Key access is restricted to authorised personnel.',
-      'Customer belongings are handled with reasonable care.',
-      'Vehicle custody and handover procedures are documented.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Key_Customer_Property_Vehicle_Custody_Policy/',
-  },
-  {
-    id: '23',
-    title: 'Vehicle Parking, Custody & Security Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Vehicles are parked in designated and controlled areas.',
-      'Vehicle movement is restricted to legitimate purposes.',
-      'Keys and vehicle access are controlled.',
-      'Security incidents or vehicle damage are reported appropriately.',
-    ],
-    link: '/parking-custody-policy',
+    link: '/Repair_Approval_Additional_Work_Authorization_Policy/',
     isInternal: true,
   },
+  
+{
+  id: '13',
+  title: 'Repair & Parts Warranty Policy',
+  category: 'Parts & Warranty',
+  points: [
+    'Warranty may apply to eligible repair work and spare parts.',
+    'Warranty conditions and exclusions are applicable.',
+    'Manufacturer or supplier warranty terms may also apply.',
+    'Warranty claims may require inspection and supporting records.',
+  ],
+  link: '/Repair_Parts_Warranty_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '14',
+  title: 'Spare Parts Inventory & Stock Management Policy',
+  category: 'Parts & Warranty',
+  points: [
+    'Parts inventory is recorded and appropriately stored.',
+    'Stock movements and parts issued to vehicles are tracked.',
+    'Defective or damaged stock is segregated where required.',
+    'Inventory may be periodically counted and reconciled.',
+  ],
+  link: '/Spare_Parts_Inventory_Stock_Management_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '15',
+  title: 'Spare Parts Procurement, Replacement & Return Policy',
+  category: 'Parts & Warranty',
+  points: [
+    'Parts are selected according to vehicle and repair requirements.',
+    'Customer approval may be required before procurement.',
+    'Defective or incorrect parts are handled through applicable procedures.',
+    'Unused parts may be returned subject to applicable conditions.',
+  ],
+  link: '/Spare_Parts_Procurement_Replacement_Return_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '16',
+  title: 'Staff / Technician Code of Conduct Policy',
+  category: 'Safety & Workshop',
+  points: [
+    'Staff are expected to act professionally and honestly.',
+    'Customer information and property must be handled confidentially.',
+    'Unauthorised vehicle use, payment diversion and record manipulation are prohibited.',
+    'Workshop safety and operational procedures must be followed.',
+  ],
+  link: '/Staff_Technician_Code_of_Conduct_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '17',
+  title: 'Vehicle Abandoned / Uncollected Vehicle Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines the process for vehicles not collected after service or inspection.',
+    'Requires documented customer contact attempts and written notices where appropriate.',
+    'Explains vehicle storage, customer property protection and release procedures.',
+    'Prohibits unauthorised sale or disposal of customer vehicles.',
+  ],
+  link: '/Vehicle_Abandoned_Uncollected_Vehicle_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '18',
+  title: 'Vehicle Damage, Loss & Incident Reporting Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines the process for reporting and investigating vehicle damage or loss.',
+    'Covers accidents, missing property, keys, documents and security incidents.',
+    'Explains customer notification, evidence preservation and incident investigation.',
+    'Outlines claim review, corrective action and staff responsibilities.',
+  ],
+  link: '/Vehicle_Damage_Loss_Incident_Reporting_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '19',
+  title: 'Vehicle Delivery & Handover Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines final vehicle inspection and quality checks before delivery.',
+    'Covers final invoicing, payment verification and insurance-related handover.',
+    'Explains key, document and accessory handover procedures.',
+    'Outlines delivery disputes, pending work and post-service concerns.',
+  ],
+  link: '/Vehicle_Delivery_Handover_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '20',
+  title: 'Vehicle Inspection, Road Test & Test Drive Safety Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines safety checks and authorisation for vehicle road tests.',
+    'Covers diagnostic testing, route limits and safe driving practices.',
+    'Explains accident reporting, damage assessment and record keeping.',
+    'Sets requirements for driver competence, customer consent and privacy.',
+  ],
+  link: '/Vehicle_Inspection_Road_Test_Test_Drive_Safety_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '21',
+  title: 'Vehicle Job Card & Work Authorization Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines vehicle intake, job card creation and condition recording.',
+    'Covers initial estimates and approval for additional repair work.',
+    'Explains insurance job records, spare parts tracking and job closure.',
+    'Sets requirements for customer approvals, record integrity and privacy.',
+  ],
+  link: '/Vehicle_Job_Card_Work_Authorization_Policy',
+  isInternal: true,
+},
+
+  {
+  id: '22',
+  title: 'Vehicle Key, Customer Property & Vehicle Custody Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines vehicle key recording, secure storage and authorised access.',
+    'Covers customer property, vehicle documents and removable accessories.',
+    'Explains vehicle custody, parking, pickup, delivery and final handover.',
+    'Sets responsibilities for missing property, incidents and confidentiality.',
+  ],
+  link: '/Vehicle_Key_Customer_Property_Vehicle_Custody_Policy',
+  isInternal: true,
+},
+  {
+  id: '23',
+  title: 'Vehicle Pickup, Delivery & Transportation Safety Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Defines authorised vehicle pickup, delivery and transportation procedures.',
+    'Covers vehicle condition checks, keys, documents and safe driving.',
+    'Explains towing, breakdowns, accidents and transportation incidents.',
+    'Sets customer, driver and transportation partner responsibilities.',
+  ],
+  link: '/Vehicle_Pickup_Delivery_Transportation_Safety_Policy',
+  isInternal: true,
+},
   {
     id: '24',
     title: 'Vehicle Pickup, Delivery & Transportation Safety Policy',
@@ -324,127 +353,133 @@ export const ALL_POLICIES_DATA: PolicyItem[] = [
     ],
     link: 'https://www.vahanxpert.in/policies/Vehicle_Pickup_Delivery_Transportation_Safety_Policy/',
   },
-  {
-    id: '25',
-    title: 'Vehicle Repair & Parts Warranty Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Repair workmanship may be covered under applicable warranty conditions.',
-      'Eligible spare parts may have separate warranty coverage.',
-      'Manufacturer or supplier warranty terms may apply.',
-      'Warranty claims may require inspection and documentation.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Repair_Parts_Warranty_Policy/',
-  },
-  {
-    id: '26',
-    title: 'Vehicle Service & Customer Data Privacy Policy',
-    category: 'Customer & Privacy',
-    points: [
-      'Customer and vehicle information is collected for legitimate purposes.',
-      'Service and payment records are handled confidentially.',
-      'Access to customer data is restricted to authorised purposes.',
-      'Customer information is protected against unauthorised disclosure.',
-    ],
-    link: '/privacy-policy',
-    isInternal: true,
-  },
-  {
-    id: '27',
-    title: 'Vehicle Service Estimate, Customer Approval & Job Card Policy',
-    category: 'Customer & Privacy',
-    points: [
-      'An estimate is prepared before applicable chargeable work.',
-      'Customer approval is obtained before authorised repairs.',
-      'Additional work or cost should be communicated appropriately.',
-      'Job cards connect inspection, approval, repair and billing records.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Service_Estimate_Customer_Approval_Job_Card_Policy/',
-  },
-  {
-    id: '28',
-    title: 'Vehicle Service Warranty & Workmanship Warranty Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Eligible workmanship may be covered under the applicable warranty.',
-      'Warranty claims follow inspection and verification procedures.',
-      'Unauthorised repairs may affect warranty eligibility.',
-      'Manufacturer and supplier warranties remain subject to their terms.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Service_Warranty_Workmanship_Warranty_Policy/',
-  },
-  {
-    id: '29',
-    title: 'Vehicle Spare Parts Procurement, Genuine Parts & Parts Replacement Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Parts are selected according to vehicle compatibility and repair needs.',
-      'Genuine, OEM or other applicable parts may be used as authorised.',
-      'Parts should be verified and recorded where practicable.',
-      'Replacement and removed-part records support traceability.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Spare_Parts_Procurement_Genuine_Parts_Replacement_Policy/',
-  },
-  {
-    id: '30',
-    title: 'Vehicle Test Drive & Road Test Policy',
-    category: 'Vehicle Movement',
-    points: [
-      'Road tests are performed only for authorised service purposes.',
-      'Pre-test vehicle checks are completed where applicable.',
-      'Safe driving and route requirements must be followed.',
-      'Accidents, breakdowns or damage during testing are reported.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Test_Drive_Road_Test_Policy/',
-  },
-  {
-    id: '31',
-    title: 'Vehicle Washing, Cleaning, Detailing & Customer Property Protection Policy',
-    category: 'Safety & Workshop',
-    points: [
-      'Vehicle cleaning and detailing follow applicable service procedures.',
-      'Vehicle surfaces and interiors are handled with reasonable care.',
-      'Customer belongings are protected during cleaning activities.',
-      'Any damage or incident identified during the process is reported.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Washing_Cleaning_Detailing_Customer_Property_Protection_Policy/',
-  },
-  {
-    id: '32',
-    title: 'Vendor & Supplier Management Policy',
-    category: 'Parts & Warranty',
-    points: [
-      'Vendors are selected through appropriate business controls.',
-      'Quality, pricing, delivery and warranty support may be monitored.',
-      'Vendor records and commercial documentation are maintained.',
-      'Conflicts of interest and improper benefits are prohibited.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Vendor_Supplier_Management_Policy/',
-  },
-  {
-    id: '33',
-    title: 'Workshop Fire Safety, Emergency Response & Evacuation Policy',
-    category: 'Safety & Workshop',
-    points: [
-      'Fire risks and flammable materials are controlled.',
-      'Emergency exits and evacuation routes must remain accessible.',
-      'Fire equipment is maintained and available.',
-      'Fire, evacuation and emergency incidents are reported and documented.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Workshop_Fire_Safety_Emergency_Response_Evacuation_Policy/',
-  },
-  {
-    id: '34',
-    title: 'Workshop Health, Safety & Fire Prevention Policy',
-    category: 'Safety & Workshop',
-    points: [
-      'Workshop personnel must follow applicable safety procedures.',
-      'PPE, lifting, electrical and equipment safety requirements apply.',
-      'Fire prevention and emergency procedures must be followed.',
-      'Unsafe conditions, accidents and near misses should be reported.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Workshop_Health_Safety_Fire_Prevention_Policy/',
-  },
+  
+  
+  
+{
+  id: '25',
+  title: 'Vehicle Repair & Parts Warranty Policy',
+  category: 'Customer & Privacy',
+  points: [
+    'Explains warranty coverage for repair workmanship and spare parts.',
+    'Covers warranty claims, inspection, exclusions and replacement parts.',
+    'Defines customer responsibilities and manufacturer/supplier warranty terms.',
+    'Outlines dispute escalation, records and applicable statutory rights.',
+  ],
+  link: '/Vehicle_Repair_Parts_Warranty_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '28',
+  title: 'Vehicle Service Warranty & Workmanship Warranty Policy',
+  category: 'Parts & Warranty',
+  points: [
+    'Explains workmanship warranty and spare-parts warranty conditions.',
+    'Covers warranty claims, inspection, diagnosis and common exclusions.',
+    'Defines customer responsibilities and third-party repair considerations.',
+    'Outlines warranty decisions, documentation and customer review options.',
+  ],
+  link: '/Vehicle_Service_Warranty_Workmanship_Warranty_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '29',
+  title:
+    'Vehicle Spare Parts Procurement, Genuine Parts & Parts Replacement Policy',
+  category: 'Parts & Warranty',
+  points: [
+    'Explains spare parts sourcing, compatibility and part verification.',
+    'Covers genuine, OEM-equivalent, aftermarket and customer-provided parts.',
+    'Defines customer approval, pricing, installation and quality checks.',
+    'Outlines warranty support, traceability and replacement procedures.',
+  ],
+  link: '/Vehicle_Spare_Parts_Procurement_Policy',
+  isInternal: true,
+},
+
+  
+
+{
+  id: '30',
+  title: 'Vehicle Test Drive & Road Test Policy',
+  category: 'Vehicle Movement',
+  points: [
+    'Road tests are performed only for authorised service purposes.',
+    'Pre-test vehicle checks are completed where applicable.',
+    'Safe driving and route requirements must be followed.',
+    'Accidents, breakdowns or damage during testing are reported.',
+  ],
+  link: '/Vehicle_Test_Drive_Road_Test_Policy',
+  isInternal: true,
+},
+
+
+  
+{
+  id: '31',
+  title:
+    'Vehicle Washing, Cleaning, Detailing & Customer Property Protection Policy',
+  category: 'Safety & Workshop',
+  points: [
+    'Vehicle cleaning and detailing follow applicable service procedures.',
+    'Vehicle surfaces and interiors are handled with reasonable care.',
+    'Customer belongings are protected during cleaning activities.',
+    'Any damage or incident identified during the process is reported.',
+  ],
+  link:
+    '/Vehicle_Washing_Cleaning_Detailing_Customer_Property_Protection_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: '32',
+  title: 'Vendor & Supplier Management Policy',
+  category: 'Parts & Warranty',
+  points: [
+    'Defines vendor selection, due diligence and onboarding procedures.',
+    'Covers purchasing approvals, pricing and conflict-of-interest controls.',
+    'Outlines supplier quality checks, delivery, invoices and warranty returns.',
+    'Establishes vendor performance monitoring and suspension procedures.',
+  ],
+  link: '/Vendor_Supplier_Management_Policy',
+  isInternal: true,
+},
+
+  
+{
+  id: "33",
+  title: "Workshop Fire Safety, Emergency Response & Evacuation Policy",
+  category: "Safety & Workshop",
+  points: [
+    "Fire prevention and safe storage of flammable materials",
+    "Emergency alarms, evacuation routes and assembly procedures",
+    "Vehicle fires, electrical emergencies and chemical spills",
+    "Fire equipment maintenance, training and incident reporting",
+  ],
+  link: "/Workshop_Fire_Safety_Emergency_Response_Evacuation_Policy",
+  isInternal: true,
+},
+
+  
+{
+  id: "34",
+  title: "Workshop Health, Safety & Fire Prevention Policy",
+  category: "Safety & Workshop",
+  points: [
+    "Workplace safety, PPE and vehicle lifting procedures",
+    "Electrical, battery, fuel and chemical safety",
+    "Fire prevention, extinguishers and emergency evacuation",
+    "First aid, incident reporting, training and maintenance",
+  ],
+  link: "/Workshop_Health_Safety_Fire_Prevention_Policy",
+  isInternal: true,
+},
+
   {
     id: '35',
     title: 'Workshop Tools, Equipment & Machinery Safety and Maintenance Policy',

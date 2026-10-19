@@ -1,0 +1,411 @@
+
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 140px 0 100px;
+  position: relative;
+  overflow-x: clip;
+  background: #ffffff;
+  color: #18181b;
+  font-family: var(--font-plus-jakarta), Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.backNav {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 32px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e4e4e7;
+  border-radius: 999px;
+  background: #f4f4f5;
+  color: #71717a;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.backLink:hover {
+  background: #e4e4e7;
+  color: #18181b;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #fed7aa;
+  border-radius: 999px;
+  background: #fff7e8;
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 0 24px;
+  color: #09090b;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+}
+
+.metaBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 2%);
+}
+
+.metaItem {
+  color: #52525b;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.metaDivider {
+  color: #d4d4d8;
+}
+
+.contentCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+}
+
+.sectionCard,
+.contactCard,
+.docControlCard {
+  width: 100%;
+  min-width: 0;
+  padding: 28px 24px;
+  border: 1px solid #f0f0f2;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 3%);
+}
+
+.sectionCard {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sectionCard:hover {
+  border-color: #fcd34d;
+  box-shadow: 0 8px 28px rgb(245 158 11 / 6%);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.sectionNumber {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #18181b;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  overflow-wrap: anywhere;
+}
+
+.sectionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.paragraph {
+  margin: 0;
+  color: #52525b;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bulletItem {
+  position: relative;
+  padding-left: 24px;
+  color: #52525b;
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.bulletItem::before {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f59e0b;
+  content: "";
+}
+
+.businessName {
+  margin: 0;
+  color: #18181b;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #f0f0f2;
+  border-radius: 14px;
+  background: #fbfbfa;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.contactItem:hover {
+  border-color: #fde047;
+  background: #fefce8;
+}
+
+.contactLabel {
+  color: #71717a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contactValue {
+  margin: 0;
+  color: #18181b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+a.contactValue:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+
+.tableResponsive {
+  width: 100%;
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.docTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.docTable th,
+.docTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f4f4f5;
+  overflow-wrap: anywhere;
+  vertical-align: top;
+}
+
+.docTable th {
+  width: 35%;
+  background: #fafafa;
+  color: #52525b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.docTable td {
+  color: #18181b;
+  font-weight: 500;
+}
+
+.docTable tr:last-child th,
+.docTable tr:last-child td {
+  border-bottom: none;
+}
+
+.footerNote {
+  margin: 8px 0 0;
+  color: #71717a;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .pageWrapper {
+    padding-top: 170px;
+    padding-bottom: 120px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .sectionCard,
+  .contactCard,
+  .docControlCard {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metaBar {
+    width: 100%;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .metaDivider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 120px 0 80px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .backNav {
+    margin-bottom: 28px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .title {
+    font-size: 29px;
+  }
+
+  .contentCard {
+    gap: 18px;
+  }
+
+  .sectionCard,
+  .contactCard,
+  .docControlCard {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .sectionTitle {
+    font-size: 19px;
+  }
+
+  .paragraph,
+  .bulletItem {
+    font-size: 15px;
+  }
+
+  .sectionNumber {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sectionHeader {
+    gap: 12px;
+  }
+
+  .docTable th,
+  .docTable td {
+    padding: 12px 10px;
+  }
+}
