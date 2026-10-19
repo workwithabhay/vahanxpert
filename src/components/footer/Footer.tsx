@@ -79,7 +79,7 @@ export default function Footer() {
         <div className={styles.topRow}>
           <Link href="/" className={styles.brandLogo} aria-label="VahanXpert Homepage">
             <Image
-              src="/logo.png"
+              src="/headerlogo.png"
               alt="VahanXpert"
               width={180}
               height={64}
@@ -98,7 +98,18 @@ export default function Footer() {
               <ul className={styles.linkList}>
                 {col.links.map((link) => (
                   <li key={link.label} className={styles.linkItem}>
-                    <Link href={link.href} className={styles.linkAnchor}>
+                    <Link
+                      href={link.href}
+                      className={styles.linkAnchor}
+                      onClick={(e) => {
+                        if (link.label === 'Book a Service') {
+                          e.preventDefault();
+                          if (typeof window !== 'undefined') {
+                            window.dispatchEvent(new CustomEvent('open-book-service-modal'));
+                          }
+                        }
+                      }}
+                    >
                       <span>{link.label}</span>
                       {link.badge && <span className={styles.linkBadge}>{link.badge}</span>}
                     </Link>
@@ -168,7 +179,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.socialIconBtn}
-                  aria-label={`Follow Vexo on ${item.name}`}
+                  aria-label={`Follow VahanXpert on ${item.name}`}
                 >
                   <SocialIcon name={item.name} />
                 </a>

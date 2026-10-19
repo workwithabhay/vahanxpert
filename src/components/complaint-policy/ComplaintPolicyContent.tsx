@@ -289,7 +289,7 @@ export default function ComplaintPolicyContent() {
                         <MapPin size={18} className={styles.contactIcon} />
                         <div>
                           <strong style={{ display: 'block', fontSize: '0.8rem', color: '#92400e' }}>WORKSHOP / OFFICE</strong>
-                          <span>D-29, Vibhuti Khand, Gomti Nagar, Lucknow, UP – 226010</span>
+                          <span>Ward No. 02, Shop No. 01, Khata, 23/20, Sahwa Bypass, near Shubham Hospital, Nohar, Rajasthan 335523</span>
                         </div>
                       </div>
 

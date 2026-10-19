@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { PlusIcon } from 'lucide-react';
 import { LiquidButton } from '@/components/animate-ui/components/buttons/liquid';
@@ -23,7 +22,7 @@ export default function HeroSection() {
         >
           {/* Eyebrow Tag with Golden Accent Bar */}
           <div className={styles.eyebrow}>
-            <span className={styles.eyebrowBar} />
+            {/* <span className={styles.eyebrowBar} /> */}
             <span>No.1 Cashless Insurance & Auto Care Platform in Nohar</span>
           </div>
 
@@ -49,8 +48,9 @@ Experience professional car servicing, quality repairs, and hassle-free insuranc
               whileHover={{ scale: 1.02, y: -1 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => {
-                const el = document.getElementById('services');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(new CustomEvent('open-book-service-modal'));
+                }
               }}
             >
               <span>Book a Service</span>
@@ -105,10 +105,10 @@ Experience professional car servicing, quality repairs, and hassle-free insuranc
               transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             >
               <Image
-                src="/mechanic-vw.png"
+                src="/hero.png"
                 alt="Smiling Mechanic with Open-hood VW"
-                width={1122}
-                height={1402}
+                width={1303}
+                height={1207}
                 priority
                 className={styles.mechanicImg}
               />

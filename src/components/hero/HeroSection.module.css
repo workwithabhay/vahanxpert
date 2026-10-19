@@ -25,14 +25,14 @@
 .container {
   position: relative;
   z-index: 2;
-  max-width: 1280px;
+  max-width: 1360px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
+  grid-template-columns: 1fr 1.18fr;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 /* ==========================================================================
@@ -173,7 +173,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 600px;
+  min-height: 660px;
   width: 100%;
 }
 
@@ -182,8 +182,8 @@
 .stageCanvas {
   position: relative;
   width: 100%;
-  max-width: 540px;
-  min-height: 540px;
+  max-width: 700px;
+  min-height: 600px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -245,31 +245,30 @@
   text-shadow: 0 2px 8px rgba(180, 83, 9, 0.5);
 }
 
-.groundShadow {
+/* .groundShadow {
   position: absolute;
-  bottom: 8px;
-  left: 14%;
+  bottom: 6px;
+  left: 8%;
   right: -2%;
-  height: 48px;
+  height: 54px;
   background:
     radial-gradient(ellipse 65% 35% at 50% 65%, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 75%),
     radial-gradient(ellipse 85% 45% at 50% 60%, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
   filter: blur(8px);
   z-index: 3;
   pointer-events: none;
-}
+} */
 
 /* Pop-out Foreground Mechanic with Open-hood VW - Shifted right */
 .mechanicImageWrapper {
   position: relative;
   z-index: 4;
-  width: 505px;
+  width: 660px;
   max-width: 100%;
-  margin-left: 55px;
-  /* Shifted slightly more to the right */
-  margin-bottom: -5px;
+  margin-left: 15px;
+  margin-bottom: -12px;
   pointer-events: none;
-  filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.22));
 }
 
 /* ==========================================================================
@@ -338,9 +337,8 @@
 /* Floating interactive badges positioned to anchor the composition */
 .floatingBadge1 {
   position: absolute;
-  top: 15%;
-  left: 15px;
-  /* Shifted nicely with the car */
+  top: 13%;
+  left: -10px;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -355,13 +353,13 @@
   font-size: 0.82rem;
   font-weight: 700;
   color: #78350f;
+  white-space: nowrap;
 }
 
 .floatingBadge2 {
   position: absolute;
-  bottom: 9%;
-  left: 20px;
-  /* Shifted nicely with the car */
+  bottom: 8%;
+  left: 0px;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -376,6 +374,7 @@
   font-size: 0.82rem;
   font-weight: 700;
   color: #18181b;
+  white-space: nowrap;
 }
 
 .activeDot {
@@ -399,6 +398,26 @@
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
+
+@media (max-width: 1200px) {
+  .stageCanvas {
+    max-width: 620px;
+    min-height: 540px;
+  }
+
+  .mechanicImageWrapper {
+    width: 590px;
+    margin-left: 0;
+  }
+
+  .floatingBadge1 {
+    left: 0;
+  }
+
+  .floatingBadge2 {
+    left: 10px;
+  }
+}
 
 @media (max-width: 1024px) {
   .container {
@@ -425,16 +444,25 @@
   }
 
   .rightCol {
-    min-height: 520px;
+    min-height: 560px;
   }
 
   .stageCanvas {
-    max-width: 480px;
+    max-width: 580px;
+    min-height: 520px;
   }
 
   .mechanicImageWrapper {
-    width: 440px;
+    width: 560px;
     margin-left: 0;
+  }
+
+  .floatingBadge1 {
+    left: 10px;
+  }
+
+  .floatingBadge2 {
+    left: 20px;
   }
 }
 
@@ -452,13 +480,18 @@
     font-size: 0.95rem;
   }
 
+  .rightCol {
+    min-height: 400px;
+  }
+
   .stageCanvas {
-    max-width: 320px;
-    min-height: 420px;
+    max-width: 420px;
+    min-height: 380px;
   }
 
   .mechanicImageWrapper {
-    width: 320px;
+    width: 100%;
+    max-width: 400px;
     margin-left: 0;
   }
 

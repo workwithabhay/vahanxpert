@@ -7,36 +7,69 @@ import styles from './ServicesSection.module.css';
 export const servicesData: ServiceItem[] = [
   {
     id: 'periodic-maintenance',
-
+   
     title: 'Periodic Maintenance',
-    description: 'Keep your car running smoothly with regular scheduled maintenance and manufacturer-standard checks.',
+    description: 'Complete multi-point vehicle service, synthetic engine oil replacement, filter changes, and 40+ precision safety checkups.',
     imageSrc: '/services/periodic-maintenance.jpg',
-    imageAlt: 'Periodic Maintenance Service',
-    ctaText: 'View Service',
-    ctaHref: '/services/periodic-maintenance',
+    imageAlt: 'VahanXpert Indian mechanic performing periodic car maintenance in modern garage',
+    ctaText: 'Book Service',
+    ctaHref: '/services',
     spotlightColor: '#f59e0b',
   },
   {
     id: 'claim-assistance',
-
-    title: 'Insurance Claim Assistance',
-    description: 'Fast, hassle-free 100% cashless claims processed directly at our certified network workshops.',
+   
+    title: 'Cashless Insurance Claims',
+    description: '100% cashless accident claim processing with 50+ network insurers, on-site surveyor coordination, and zero-hassle documentation.',
     imageSrc: '/services/claim-assistance.jpg',
-    imageAlt: 'Insurance Claim Assistance',
-    ctaText: 'View Service',
-    ctaHref: '/services/claim-assistance',
+    imageAlt: 'VahanXpert insurance claim advisor and surveyor inspecting car in garage',
+    ctaText: 'Claim Assistance',
+    ctaHref: '/insurance-claims',
     spotlightColor: '#d97706',
   },
   {
     id: 'engine-diagnostics',
-
+   
     title: 'Engine & Diagnostics',
-    description: 'High-tech computerized system diagnostics, battery analysis, and electronic calibration.',
+    description: 'Computerized ECU scanning, engine troubleshooting, battery load testing, sensor calibration, and electronic fault resolution.',
     imageSrc: '/services/diagnostics.jpg',
-    imageAlt: 'Engine and Battery Diagnostics',
-    ctaText: 'View Service',
-    ctaHref: '/services/diagnostics',
+    imageAlt: 'VahanXpert Indian technician scanning engine with computerized diagnostic tool',
+    ctaText: 'Diagnose Vehicle',
+    ctaHref: '/services',
     spotlightColor: '#f59e0b',
+  },
+  {
+    id: 'denting-painting',
+   
+    title: 'Denting & Painting',
+    description: 'Precision dent removal, panel beating, anti-rust underbody treatment, and factory-finish painting in an illuminated paint booth.',
+    imageSrc: '/services/denting-painting.jpg',
+    imageAlt: 'VahanXpert Indian auto painter refinishing car panel in modern paint booth',
+    ctaText: 'Bodyshop Care',
+    ctaHref: '/services',
+    spotlightColor: '#d97706',
+  },
+  {
+    id: 'ac-service',
+   
+    title: 'Car AC Repair & Climate Care',
+    description: 'AC gas leak detection, compressor maintenance, automated refrigerant recharge, cooling coil cleaning, and cabin disinfection.',
+    imageSrc: '/services/ac-service.jpg',
+    imageAlt: 'VahanXpert Indian AC technician recharging refrigerant in car workshop',
+    ctaText: 'Book AC Service',
+    ctaHref: '/services',
+    spotlightColor: '#f59e0b',
+  },
+  {
+    id: 'brake-suspension',
+   
+    title: 'Brake & Suspension Care',
+    description: 'Brake pad replacement, disc rotor skimming, shock absorber overhaul, bushing checkups, and precision wheel balancing.',
+    imageSrc: '/services/brake-suspension.jpg',
+    imageAlt: 'VahanXpert Indian mechanic servicing disc brake and suspension on car lift',
+    ctaText: 'Inspect Brakes',
+    ctaHref: '/services',
+    spotlightColor: '#d97706',
   },
 ];
 

@@ -727,7 +727,7 @@ export default function PrivacyPolicyContent() {
                 <div className={styles.contactDetailItem}>
                   <span className={styles.contactDetailLabel}>Registered Office</span>
                   <span className={styles.contactDetailValue}>
-                    D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
+                    Ward No. 02, Shop No. 01, Khata, 23/20, Sahwa Bypass, near Shubham Hospital, Nohar, Rajasthan 335523
                   </span>
                 </div>
               </div>

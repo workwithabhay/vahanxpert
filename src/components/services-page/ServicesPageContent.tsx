@@ -178,7 +178,16 @@ export default function ServicesPageContent() {
 
            
             <motion.div className={styles.heroCtas} variants={fadeInUp}>
-              <Link href="/contact" className={styles.primaryBtn}>
+              <Link
+                href="#book-service"
+                className={styles.primaryBtn}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window !== 'undefined') {
+                    window.dispatchEvent(new CustomEvent('open-book-service-modal'));
+                  }
+                }}
+              >
                 <span>Book a Service Now</span>
                 <ArrowRight size={16} />
               </Link>

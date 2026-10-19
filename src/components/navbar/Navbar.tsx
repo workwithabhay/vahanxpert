@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CardNav, { CardNavItem } from './CardNav';
-import headerLogo from './headerlogo.png';
+import BookServiceModal from '@/components/common/BookServiceModal';
 
 const items: CardNavItem[] = [
   {
@@ -10,7 +10,7 @@ const items: CardNavItem[] = [
     description: 'Complete multi-brand car care & repairs.',
     links: [
       { label: 'All Services', href: '/services' },
-      { label: 'Book a Service', href: '/contact' }
+      { label: 'Book a Service', href: '#book-service' }
     ]
   },
   {
@@ -18,7 +18,6 @@ const items: CardNavItem[] = [
     description: 'The story and mission behind VahanXpert.',
     links: [
       { label: 'About Us', href: '/about' },
-     
     ]
   },
   {
@@ -50,49 +49,78 @@ const items: CardNavItem[] = [
 ];
 
 export default function Navbar() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpen = () => setIsModalOpen(true);
+    window.addEventListener('open-book-service-modal', handleOpen);
+    return () => window.removeEventListener('open-book-service-modal', handleOpen);
+  }, []);
+
   return (
-    <header
-      style={{
-        position: 'fixed',
-        top: '16px',
-        left: 0,
-        right: 0,
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        padding: '0 16px',
-        boxSizing: 'border-box',
-        zIndex: 100,
-        pointerEvents: 'none',
-      }}
-    >
-      <div
+    <>
+      <header
         style={{
+          position: 'fixed',
+          top: '16px',
+          left: 0,
+          right: 0,
           width: '100%',
-          maxWidth: '800px',
-          pointerEvents: 'auto',
-          position: 'relative',
+          display: 'flex',
+          justifyContent: 'center',
+          padding: '0 16px',
+          boxSizing: 'border-box',
+          zIndex: 100,
+          pointerEvents: 'none',
         }}
       >
-        <CardNav
-          logo={typeof headerLogo === 'string' ? headerLogo : headerLogo.src}
-          logoAlt="VahanXpert"
-          logoHref="/"
-          items={items}
-          cta={{ label: 'Book a Service', href: '/contact' }}
-          cardEffect="rise"
-          openOn="click"
-          surface="glass"
-          stagger={0.12}
-          bounce={0.2}
-          menuLabel
-          speed={1}
-          cardHeight={176}
-          maxWidth={800}
-          intro
-          theme="light"
-        />
-      </div>
-    </header>
+        <div
+          style={{
+            width: '100%',
+            maxWidth: '800px',
+            pointerEvents: 'auto',
+            position: 'relative',
+          }}
+        >
+          <CardNav
+            logo="/headerlogo.png"
+            logoAlt="VahanXpert"
+            logoHref="/"
+            logoHeight={44}
+            items={items}
+            cta={{
+              label: 'Book a Service',
+              onClick: (e) => {
+                e.preventDefault();
+                setIsModalOpen(true);
+              },
+            }}
+            onLinkClick={(link, _item, e) => {
+              if (link.label === 'Book a Service') {
+                e.preventDefault();
+                setIsModalOpen(true);
+              }
+            }}
+            cardEffect="rise"
+            openOn="click"
+            surface="glass"
+            stagger={0.12}
+            bounce={0.2}
+            menuLabel
+            speed={1}
+            cardHeight={196}
+            maxWidth={800}
+            intro
+            theme="light"
+          />
+        </div>
+      </header>
+
+      {/* Animated Book A Service Modal */}
+      <BookServiceModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </>
   );
 }

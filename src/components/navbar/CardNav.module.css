@@ -172,12 +172,13 @@
 /* Logo */
 .logo {
   display: inline-flex;
-  height: var(--cn-logo, 30px);
+  height: var(--cn-logo, 44px);
   align-items: center;
   justify-self: center;
   color: var(--cn-text);
   text-decoration: none;
   outline: none;
+  border-radius: 6px;
 }
 
 .logo:focus-visible {
@@ -190,8 +191,9 @@
   display: block;
   height: 100%;
   width: auto;
-  max-height: 32px;
+  max-height: var(--cn-logo, 44px);
   object-fit: contain;
+  border-radius: 6px;
 }
 
 .root[data-narrow] .logo {

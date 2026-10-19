@@ -756,7 +756,7 @@ export default function ParkingCustodyContent() {
                   <div>
                     <strong>VahanXpert Services</strong>
                     <br />
-                    D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
+                    Ward No. 02, Shop No. 01, Khata, 23/20, Sahwa Bypass, near Shubham Hospital, Nohar, Rajasthan 335523
                   </div>
                 </div>
 
