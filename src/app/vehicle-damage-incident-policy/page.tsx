@@ -6,7 +6,7 @@ import VehicleDamagePolicyContent from '@/components/vehicle-damage-policy/Vehic
 export const metadata: Metadata = {
   title: 'Customer Vehicle Damage & Incident Reporting Policy | VahanXpert',
   description:
-    'Official Customer Vehicle Damage & Incident Reporting Policy for VahanXpert Services. Policy No.: VXS/IR/012 | Version: 1.0 | Effective Date: 20/09/2026.',
+    'Official Customer Vehicle Damage & Incident Reporting Policy for VahanXpert Services.',
   alternates: {
     canonical: '/vehicle-damage-incident-policy',
   },

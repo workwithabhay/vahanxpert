@@ -242,16 +242,16 @@ export const ALL_POLICIES_DATA: PolicyItem[] = [
 
   
 {
-  id: '17',
-  title: 'Vehicle Abandoned / Uncollected Vehicle Policy',
-  category: 'Vehicle Movement',
+  id: "17",
+  title: "Vehicle Abandoned / Uncollected Vehicle Policy",
+  category: "Vehicle Movement",
   points: [
-    'Defines the process for vehicles not collected after service or inspection.',
-    'Requires documented customer contact attempts and written notices where appropriate.',
-    'Explains vehicle storage, customer property protection and release procedures.',
-    'Prohibits unauthorised sale or disposal of customer vehicles.',
+    "Defines the process for vehicles not collected after service or inspection.",
+    "Requires documented customer contact attempts and written notices where appropriate.",
+    "Explains vehicle storage, customer property protection and release procedures.",
+    "Prohibits unauthorised sale or disposal of customer vehicles.",
   ],
-  link: '/Vehicle_Abandoned_Uncollected_Vehicle_Policy',
+  link: "/Vehicle_Abandoned_Uncollected_Vehicle_Policy",
   isInternal: true,
 },
 
@@ -351,7 +351,8 @@ export const ALL_POLICIES_DATA: PolicyItem[] = [
       'Transportation follows safe driving and towing procedures.',
       'Delivery condition is verified with the receiving person.',
     ],
-    link: 'https://www.vahanxpert.in/policies/Vehicle_Pickup_Delivery_Transportation_Safety_Policy/',
+    link: '/Vehicle_Pickup_Delivery_Transportation_Safety_Policy',
+  isInternal: true,
   },
   
   
@@ -370,7 +371,34 @@ export const ALL_POLICIES_DATA: PolicyItem[] = [
   isInternal: true,
 },
 
-  
+
+{
+  id: '26',
+  title: 'Vehicle Service & Customer Data Privacy Policy',
+  category: 'Data Privacy',
+  points: [
+    'Customer and vehicle information is collected for legitimate purposes.',
+    'Service and payment records are handled confidentially.',
+    'Access to customer data is restricted to authorised purposes.',
+    'Customer information is protected against unauthorised disclosure.',
+  ],
+  link: '/Vehicle_Service_Customer_Data_Privacy_Policy',
+  isInternal: true,
+},
+
+ {
+  id: '27',
+  title: 'Vehicle Service Estimate, Customer Approval & Job Card Policy',
+  category: 'Customer & Privacy',
+  points: [
+    'An estimate is prepared before applicable chargeable work.',
+    'Customer approval is obtained before authorised repairs.',
+    'Additional work or cost should be communicated appropriately.',
+    'Job cards connect inspection, approval, repair and billing records.',
+  ],
+  link: '/Vehicle_Service_Estimate_Customer_Approval_Job_Card_Policy',
+  isInternal: true,
+}, 
 {
   id: '28',
   title: 'Vehicle Service Warranty & Workmanship Warranty Policy',
@@ -479,28 +507,32 @@ export const ALL_POLICIES_DATA: PolicyItem[] = [
   link: "/Workshop_Health_Safety_Fire_Prevention_Policy",
   isInternal: true,
 },
+{
+  id: "35",
+  title: "Workshop Tools, Equipment & Machinery Safety and Maintenance Policy",
+  category: "Safety & Workshop",
+  points: [
+    "Workshop equipment is used only by authorised personnel.",
+    "Tools and machinery should be inspected before use.",
+    "Defective equipment should be isolated and reported.",
+    "Maintenance, calibration and safety records should be maintained.",
+  ],
+  link: "/Workshop_Health_Safety_Fire_Prevention_Policy",
+  isInternal: true,
+},
 
-  {
-    id: '35',
-    title: 'Workshop Tools, Equipment & Machinery Safety and Maintenance Policy',
-    category: 'Safety & Workshop',
-    points: [
-      'Workshop equipment is used only by authorised personnel.',
-      'Tools and machinery should be inspected before use.',
-      'Defective equipment should be isolated and reported.',
-      'Maintenance, calibration and safety records should be maintained.',
-    ],
-    link: 'https://www.vahanxpert.in/policies/Workshop_Tools_Equipment_Machinery_Safety_and_Maintenance_Policy/',
-  },
+
 ];
 
 const CATEGORIES = [
   'All',
   'Customer & Privacy',
+  'Data Privacy',
   'Vehicle Movement',
   'Parts & Warranty',
   'Safety & Workshop',
-  'Claims & Billing',
+  'Claims & Billing', 
+  
 ] as const;
 
 const fadeInUp: Variants = {

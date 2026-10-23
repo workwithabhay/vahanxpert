@@ -172,86 +172,103 @@ export default function SparePartsProcurementContent() {
           </p>
         </header>
 
-        <article className={styles.document}>
-          {sections.map((section) => (
-            <section className={styles.policySection} key={section.title}>
-              <h2>{section.title}</h2>
+        
+<article className={styles.document}>
+  {sections.map((section, index) => (
+    <section className={styles.policyCard} key={section.title}>
+      <div className={styles.sectionHeader}>
+        <span className={styles.sectionNumber}>
+          {String(index + 1).padStart(2, "0")}
+        </span>
 
-              {section.paragraphs?.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+        <div className={styles.sectionContent}>
+          <h2>{section.title.replace(/^\d+\.\s*/, "")}</h2>
 
-              {section.bullets && (
-                <ul>
-                  {section.bullets.map((bullet, index) => (
-                    <li key={index}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
-            </section>
+          {section.paragraphs?.map((paragraph, paragraphIndex) => (
+            <p key={paragraphIndex}>{paragraph}</p>
           ))}
 
-          <section className={styles.policySection}>
-            <h2>22. Business Contact</h2>
-            <div className={styles.contact}>
-              <strong>VahanXpert Services</strong>
-              <p>
-                D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh –
-                226010
-              </p>
-              <p>
-                Email:{' '}
-                <a href="mailto:info.vahanxpert@gmail.com">
-                  info.vahanxpert@gmail.com
-                </a>
-              </p>
-              <p>
-                Mobile:{' '}
-                <a href="tel:+918930293896">+91 8930293896</a>
-              </p>
-            </div>
-          </section>
+          {section.bullets && (
+            <ul>
+              {section.bullets.map((bullet, bulletIndex) => (
+                <li key={bulletIndex}>{bullet}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  ))}
 
-          <section className={styles.policySection}>
-            <h2>23. Document Control</h2>
-            <div className={styles.tableWrapper}>
-              <table className={styles.table}>
-                <tbody>
-                  <tr>
-                    <th>Document Name</th>
-                    <td>
-                      Spare Parts Procurement, Replacement &amp; Return Policy
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>Organisation</th>
-                    <td>VahanXpert Services</td>
-                  </tr>
-                  <tr>
-                    <th>Policy Number</th>
-                    <td>VXS/SP/009</td>
-                  </tr>
-                  <tr>
-                    <th>Version / Effective Date</th>
-                    <td>1.0 / 20/09/2026</td>
-                  </tr>
-                  <tr>
-                    <th>Review Frequency</th>
-                    <td>
-                      At least annually or whenever operational/legal
-                      requirements change
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <p className={styles.footerText}>
-            VahanXpert Services | Spare Parts Procurement, Replacement &amp;
-            Return Policy
+  <section className={styles.policyCard}>
+    <div className={styles.sectionHeader}>
+      <span className={styles.sectionNumber}>22</span>
+      <div className={styles.sectionContent}>
+        <h2>Business Contact</h2>
+        <div className={styles.contact}>
+          <strong>VahanXpert Services</strong>
+          <p>
+            D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
           </p>
-        </article>
+          <p>
+            Email:{" "}
+            <a href="mailto:info.vahanxpert@gmail.com">
+              info.vahanxpert@gmail.com
+            </a>
+          </p>
+          <p>
+            Mobile:{" "}
+            <a href="tel:+918930293896">+91 8930293896</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className={styles.policyCard}>
+    <div className={styles.sectionHeader}>
+      <span className={styles.sectionNumber}>23</span>
+      <div className={styles.sectionContent}>
+        <h2>Document Control</h2>
+        <div className={styles.tableWrapper}>
+          <table className={styles.table}>
+            <tbody>
+              <tr>
+                <th>Document Name</th>
+                <td>Spare Parts Procurement, Replacement &amp; Return Policy</td>
+              </tr>
+              <tr>
+                <th>Organisation</th>
+                <td>VahanXpert Services</td>
+              </tr>
+              <tr>
+                <th>Policy Number</th>
+                <td>VXS/SP/009</td>
+              </tr>
+              <tr>
+                <th>Version / Effective Date</th>
+                <td>1.0 / 20/09/2026</td>
+              </tr>
+              <tr>
+                <th>Review Frequency</th>
+                <td>
+                  At least annually or whenever operational/legal requirements
+                  change
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p className={styles.footerText}>
+    VahanXpert Services | Spare Parts Procurement, Replacement &amp; Return
+    Policy
+  </p>
+</article>
+
       </div>
     </section>
   );

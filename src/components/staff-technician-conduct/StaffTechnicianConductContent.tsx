@@ -223,88 +223,114 @@ export default function StaffTechnicianConductContent() {
           </p>
         </header>
 
-        <article className={styles.document}>
-          {sections.map((section) => (
-            <section className={styles.policySection} key={section.title}>
-              <h2>{section.title}</h2>
+        
+<article className={styles.document}>
+  {sections.map((section, index) => (
+    <section className={styles.policyCard} key={section.title}>
+      <div className={styles.sectionHeader}>
+        <span className={styles.sectionNumber}>
+          {String(index + 1).padStart(2, "0")}
+        </span>
 
-              {section.paragraphs?.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+        <div className={styles.sectionContent}>
+          <h2>{section.title.replace(/^\d+\.\s*/, "")}</h2>
 
-              {section.bullets && (
-                <ul>
-                  {section.bullets.map((bullet, index) => (
-                    <li key={index}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
-            </section>
+          {section.paragraphs?.map((paragraph, paragraphIndex) => (
+            <p key={paragraphIndex}>{paragraph}</p>
           ))}
 
-          <section className={styles.policySection}>
-            <h2>29. Business Contact</h2>
+          {section.bullets && (
+            <ul>
+              {section.bullets.map((bullet, bulletIndex) => (
+                <li key={bulletIndex}>{bullet}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  ))}
 
-            <div className={styles.contact}>
-              <strong>VahanXpert Services</strong>
+  <section className={styles.policyCard}>
+    <div className={styles.sectionHeader}>
+      <span className={styles.sectionNumber}>
+        {String(sections.length + 1).padStart(2, "0")}
+      </span>
 
-              <p>
-                D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh –
-                226010
-              </p>
+      <div className={styles.sectionContent}>
+        <h2>Business Contact</h2>
 
-              <p>
-                Email:{' '}
-                <a href="mailto:info.vahanx@gmail.com">
-                  info.vahanx@gmail.com
-                </a>
-              </p>
+        <div className={styles.contact}>
+          <strong>VahanXpert Services</strong>
 
-              <p>
-                Mobile:{' '}
-                <a href="tel:+918930293896">+91 8930293896</a>
-              </p>
-            </div>
-          </section>
-
-          <section className={styles.policySection}>
-            <h2>30. Document Control</h2>
-
-            <div className={styles.tableWrapper}>
-              <table className={styles.table}>
-                <tbody>
-                  <tr>
-                    <th>Document Name</th>
-                    <td>Staff / Technician Code of Conduct Policy</td>
-                  </tr>
-                  <tr>
-                    <th>Organisation</th>
-                    <td>VahanXpert Services</td>
-                  </tr>
-                  <tr>
-                    <th>Policy Number</th>
-                    <td>VXS/EMP/026</td>
-                  </tr>
-                  <tr>
-                    <th>Version / Effective Date</th>
-                    <td>1.0 / 20/09/2026</td>
-                  </tr>
-                  <tr>
-                    <th>Review Frequency</th>
-                    <td>
-                      At least annually or whenever operational/employment
-                      requirements change
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <p className={styles.footerText}>
-            VahanXpert Services | Staff / Technician Code of Conduct Policy
+          <p>
+            D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh –
+            226010
           </p>
-        </article>
+
+          <p>
+            Email:{" "}
+            <a href="mailto:info.vahanxpert@gmail.com">
+              info.vahanxpert@gmail.com
+            </a>
+          </p>
+
+          <p>
+            Mobile:{" "}
+            <a href="tel:+918930293896">+91 8930293896</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className={styles.policyCard}>
+    <div className={styles.sectionHeader}>
+      <span className={styles.sectionNumber}>
+        {String(sections.length + 2).padStart(2, "0")}
+      </span>
+
+      <div className={styles.sectionContent}>
+        <h2>Document Control</h2>
+
+        <div className={styles.tableWrapper}>
+          <table className={styles.table}>
+            <tbody>
+              <tr>
+                <th>Document Name</th>
+                <td>Staff / Technician Code of Conduct Policy</td>
+              </tr>
+              <tr>
+                <th>Organisation</th>
+                <td>VahanXpert Services</td>
+              </tr>
+              <tr>
+                <th>Policy Number</th>
+                <td>VXS/EMP/026</td>
+              </tr>
+              <tr>
+                <th>Version / Effective Date</th>
+                <td>1.0 / 20/09/2026</td>
+              </tr>
+              <tr>
+                <th>Review Frequency</th>
+                <td>
+                  At least annually or whenever operational/employment
+                  requirements change
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p className={styles.footerText}>
+    VahanXpert Services | Staff / Technician Code of Conduct Policy
+  </p>
+</article>
+
       </div>
     </section>
   );

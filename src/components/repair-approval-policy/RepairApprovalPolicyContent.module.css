@@ -300,3 +300,61 @@
     font-size: 15px;
   }
 }
+
+/* Document Control alignment fix */
+.docControlCard .tableResponsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.docControlCard .docTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.docControlCard .docTable th,
+.docControlCard .docTable td {
+  padding: 3px 12px 3px 0;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  border: none;
+}
+
+.docControlCard .docTable th {
+  width: 190px;
+  white-space: normal;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.docControlCard .docTable td {
+  color: #52525b;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .docControlCard .docTable th,
+  .docControlCard .docTable td {
+    padding: 4px 8px 4px 0;
+    font-size: 14px;
+  }
+
+  .docControlCard .docTable th {
+    width: 140px;
+  }
+}
+
+/* Hover border for Business Contact and Document Control */
+.contactCard,
+.docControlCard {
+  border: 1px solid #f0f0f2;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contactCard:hover,
+.docControlCard:hover {
+  border-color: #fcd34d;
+  box-shadow: 0 8px 28px rgb(245 158 11 / 6%);
+}

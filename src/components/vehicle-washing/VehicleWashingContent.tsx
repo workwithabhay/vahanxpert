@@ -198,87 +198,93 @@ export default function VehicleWashingContent() {
           </div>
         </header>
 
-        <article className={styles.document}>
-          {sections.map((section) => (
-            <section className={styles.policySection} key={section.title}>
-              <h2>{section.title}</h2>
+        
+<div className={styles.documentCards}>
+  {sections.map((section) => (
+    <section
+      className={`${styles.document} ${styles.policySection}`}
+      key={section.title}
+    >
+      <h2>{section.title}</h2>
 
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+      {section.paragraphs?.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
 
-              {section.bullets && (
-                <ul>
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
-            </section>
+      {section.bullets && (
+        <ul>
+          {section.bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
           ))}
+        </ul>
+      )}
+    </section>
+  ))}
 
-          <section className={styles.policySection}>
-            <h2>26. Business Contact</h2>
-            <div className={styles.contact}>
-              <strong>VahanXpert Services</strong>
-              <p>
-                D-29, Vibhuti Khand, Gomti Nagar, Lucknow,
-                Uttar Pradesh – 226010
-              </p>
-              <p>
-                Email:{" "}
-                <a href="mailto:info.vahanxpert@gmail.com">
-                  info.vahanxpert@gmail.com
-                </a>
-              </p>
-              <p>
-                Mobile:{" "}
-                <a href="tel:+918930293896">+91 8930293896</a>
-              </p>
-            </div>
-          </section>
+  <section className={`${styles.document} ${styles.policySection}`}>
+    <h2>26. Business Contact</h2>
 
-          <section className={styles.policySection}>
-            <h2>27. Document Control</h2>
-            <div className={styles.tableWrapper}>
-              <table className={styles.table}>
-                <tbody>
-                  <tr>
-                    <th scope="row">Document Name</th>
-                    <td>
-                      Vehicle Washing, Cleaning, Detailing &amp; Customer
-                      Property Protection Policy
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Organisation</th>
-                    <td>VahanXpert Services</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Policy Number</th>
-                    <td>VXS/WCD/029</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Version / Effective Date</th>
-                    <td>1.0 / 20/09/2026</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Review Frequency</th>
-                    <td>
-                      At least annually or whenever cleaning/safety
-                      requirements change
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+    <div className={styles.contact}>
+      <strong>VahanXpert Services</strong>
+      <p>
+        D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
+      </p>
+      <p>
+        Email:{" "}
+        <a href="mailto:info.vahanxpert@gmail.com">
+          info.vahanxpert@gmail.com
+        </a>
+      </p>
+      <p>
+        Mobile:{" "}
+        <a href="tel:+918930293896">+91 8930293896</a>
+      </p>
+    </div>
+  </section>
 
-          <p className={styles.footerText}>
-            VahanXpert Services | Vehicle Washing, Cleaning, Detailing
-            &amp; Customer Property Protection Policy
-          </p>
-        </article>
+  <section className={`${styles.document} ${styles.policySection}`}>
+    <h2>27. Document Control</h2>
+
+    <div className={styles.tableWrapper}>
+      <table className={styles.table}>
+        <tbody>
+          <tr>
+            <th scope="row">Document Name</th>
+            <td>
+              Vehicle Washing, Cleaning, Detailing &amp; Customer Property
+              Protection Policy
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Organisation</th>
+            <td>VahanXpert Services</td>
+          </tr>
+          <tr>
+            <th scope="row">Policy Number</th>
+            <td>VXS/WCD/029</td>
+          </tr>
+          <tr>
+            <th scope="row">Version / Effective Date</th>
+            <td>1.0 / 20/09/2026</td>
+          </tr>
+          <tr>
+            <th scope="row">Review Frequency</th>
+            <td>
+              At least annually or whenever cleaning/safety requirements
+              change
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <p className={styles.footerText}>
+    VahanXpert Services | Vehicle Washing, Cleaning, Detailing &amp; Customer
+    Property Protection Policy
+  </p>
+</div>
+
       </div>
     </div>
   );

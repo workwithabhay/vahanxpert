@@ -1,0 +1,274 @@
+
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 140px 20px 100px;
+  box-sizing: border-box;
+  color: #111827;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(245, 158, 11, 0.07),
+      transparent 35%
+    ),
+    #f7f9fc;
+  font-family: var(--font-plus-jakarta), Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 24px;
+  padding: 52px 44px;
+  border: 1px solid #dfe6ef;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
+}
+
+.eyebrow {
+  margin: 0 0 20px;
+  color: #ea580c;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.hero h1 {
+  margin: 0 0 28px;
+  color: #111827;
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.meta strong {
+  color: #475569;
+  font-weight: 700;
+}
+
+.separator {
+  color: #cbd5e1;
+}
+
+.documentCards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.document {
+  min-width: 0;
+  padding: 36px 44px;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.035);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.document:hover {
+  border-color: #f97316;
+  box-shadow: 0 8px 26px rgba(249, 115, 22, 0.09);
+}
+
+.document h2 {
+  margin: 0 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #111827;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.document p {
+  margin: 0 0 14px;
+  color: #52627a;
+  font-size: 17px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.document p:last-child {
+  margin-bottom: 0;
+}
+
+.document ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding-left: 25px;
+  color: #52627a;
+}
+
+.document li {
+  padding-left: 3px;
+  font-size: 17px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.document li::marker {
+  color: #f59e0b;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.contact a {
+  color: #315f96;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact a:hover {
+  color: #ea580c;
+  text-decoration: underline;
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 15px;
+  line-height: 1.7;
+  vertical-align: top;
+}
+
+.table th {
+  width: 34%;
+  color: #334155;
+  background: #f8fafc;
+  font-weight: 700;
+}
+
+.table td {
+  color: #52627a;
+}
+
+.table tr:last-child th,
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.documentFooter {
+  padding: 18px 12px 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 115px 16px 64px;
+  }
+
+  .hero {
+    margin-bottom: 18px;
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .meta {
+    gap: 6px 9px;
+    font-size: 13px;
+  }
+
+  .documentCards {
+    gap: 16px;
+  }
+
+  .document {
+    padding: 26px 24px;
+    border-radius: 20px;
+  }
+
+  .document h2 {
+    font-size: 20px;
+  }
+
+  .document p,
+  .document li {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 100px 12px 48px;
+  }
+
+  .hero {
+    padding: 26px 20px;
+  }
+
+  .hero h1 {
+    font-size: 29px;
+  }
+
+  .document {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .document h2 {
+    font-size: 18px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}

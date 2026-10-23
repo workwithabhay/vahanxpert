@@ -182,81 +182,88 @@ export default function VehicleJobCardContent() {
           </div>
         </header>
 
-        <article className={styles.document}>
-          {sections.map((section) => (
-            <section className={styles.policySection} key={section.title}>
-              <h2>{section.title}</h2>
+        
+<div className={styles.documentCards}>
+  {sections.map((section) => (
+    <section
+      className={`${styles.document} ${styles.policySection}`}
+      key={section.title}
+    >
+      <h2>{section.title}</h2>
 
-              {section.paragraphs?.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+      {section.paragraphs?.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
 
-              {section.bullets && (
-                <ul>
-                  {section.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              )}
-            </section>
+      {section.bullets && (
+        <ul>
+          {section.bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
           ))}
+        </ul>
+      )}
+    </section>
+  ))}
 
-          <section className={styles.policySection}>
-            <h2>21. Business Contact</h2>
-            <div className={styles.contact}>
-              <strong>VahanXpert Services</strong>
-              <p>
-                D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
-              </p>
-              <p>
-                Email:{' '}
-                <a href="mailto:info.vahanxpert@gmail.com">
-                  info.vahanxpert@gmail.com
-                </a>
-              </p>
-              <p>
-                Mobile: <a href="tel:+918930293896">+91 8930293896</a>
-              </p>
-            </div>
-          </section>
+  <section className={`${styles.document} ${styles.policySection}`}>
+    <h2>21. Business Contact</h2>
 
-          <section className={styles.policySection}>
-            <h2>22. Document Control</h2>
-            <div className={styles.tableWrapper}>
-              <table className={styles.table}>
-                <tbody>
-                  <tr>
-                    <th>Document Name</th>
-                    <td>Vehicle Job Card &amp; Work Authorization Policy</td>
-                  </tr>
-                  <tr>
-                    <th>Organisation</th>
-                    <td>VahanXpert Services</td>
-                  </tr>
-                  <tr>
-                    <th>Policy Number</th>
-                    <td>VXS/JW/002</td>
-                  </tr>
-                  <tr>
-                    <th>Version / Effective Date</th>
-                    <td>1.0 / 20/09/2026</td>
-                  </tr>
-                  <tr>
-                    <th>Review Frequency</th>
-                    <td>
-                      At least annually or whenever operational/legal
-                      requirements change
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+    <div className={styles.contact}>
+      <strong>VahanXpert Services</strong>
+      <p>
+        D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
+      </p>
+      <p>
+        Email:{' '}
+        <a href="mailto:info.vahanxpert@gmail.com">
+          info.vahanxpert@gmail.com
+        </a>
+      </p>
+      <p>
+        Mobile: <a href="tel:+918930293896">+91 8930293896</a>
+      </p>
+    </div>
+  </section>
 
-          <p className={styles.footerText}>
-            VahanXpert Services | Vehicle Job Card &amp; Work Authorization Policy
-          </p>
-        </article>
+  <section className={`${styles.document} ${styles.policySection}`}>
+    <h2>22. Document Control</h2>
+
+    <div className={styles.tableWrapper}>
+      <table className={styles.table}>
+        <tbody>
+          <tr>
+            <th>Document Name</th>
+            <td>Vehicle Job Card &amp; Work Authorization Policy</td>
+          </tr>
+          <tr>
+            <th>Organisation</th>
+            <td>VahanXpert Services</td>
+          </tr>
+          <tr>
+            <th>Policy Number</th>
+            <td>VXS/JW/002</td>
+          </tr>
+          <tr>
+            <th>Version / Effective Date</th>
+            <td>1.0 / 20/09/2026</td>
+          </tr>
+          <tr>
+            <th>Review Frequency</th>
+            <td>
+              At least annually or whenever operational/legal requirements
+              change
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <p className={styles.footerText}>
+    VahanXpert Services | Vehicle Job Card &amp; Work Authorization Policy
+  </p>
+</div>
+
       </div>
     </section>
   );

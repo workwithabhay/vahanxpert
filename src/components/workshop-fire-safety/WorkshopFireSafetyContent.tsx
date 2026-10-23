@@ -242,91 +242,99 @@ export default function WorkshopFireSafetyContent() {
             <a href="#section-29">Document Control</a>
           </aside>
 
-          <article className={styles.document}>
-            {sections.map((section, index) => (
-              <section
-                className={styles.section}
-                id={`section-${index + 1}`}
-                key={section.title}
-              >
-                <h2>{section.title}</h2>
+          
+<div className={styles.documentCards}>
+  {sections.map((section, index) => (
+    <section
+      className={`${styles.document} ${styles.section}`}
+      id={`section-${index + 1}`}
+      key={section.title}
+    >
+      <h2>{section.title}</h2>
 
-                {section.content?.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+      {section.content?.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ))}
 
-                {section.bullets && (
-                  <ul>
-                    {section.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
-                    ))}
-                  </ul>
-                )}
-              </section>
-            ))}
+      {section.bullets && (
+        <ul>
+          {section.bullets.map((bullet) => (
+            <li key={bullet}>{bullet}</li>
+          ))}
+        </ul>
+      )}
+    </section>
+  ))}
 
-            <section className={styles.section} id="section-28">
-              <h2>28. Business Contact</h2>
-              <div className={styles.contact}>
-                <h3>VahanXpert Services</h3>
-                <p>
-                  D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh –
-                  226010
-                </p>
-                <p>
-                  <strong>Email: </strong>
-                  <a href="mailto:info.vahanxpert@gmail.com">
-                    info.vahanxpert@gmail.com
-                  </a>
-                </p>
-                <p>
-                  <strong>Mobile: </strong>
-                  <a href="tel:+918930293896">+91 8930293896</a>
-                </p>
-              </div>
-            </section>
+  <section
+    className={`${styles.document} ${styles.section}`}
+    id="section-28"
+  >
+    <h2>28. Business Contact</h2>
 
-            <section className={styles.section} id="section-29">
-              <h2>29. Document Control</h2>
-              <div className={styles.tableWrap}>
-                <table>
-                  <tbody>
-                    <tr>
-                      <th>Document Name</th>
-                      <td>
-                        Workshop Fire Safety, Emergency Response &amp;
-                        Evacuation Policy
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Organisation</th>
-                      <td>VahanXpert Services</td>
-                    </tr>
-                    <tr>
-                      <th>Policy Number</th>
-                      <td>VXS/FSE/032</td>
-                    </tr>
-                    <tr>
-                      <th>Version / Effective Date</th>
-                      <td>1.0 / 20/09/2026</td>
-                    </tr>
-                    <tr>
-                      <th>Review Frequency</th>
-                      <td>
-                        At least annually or whenever premises/fire-safety
-                        requirements change
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </section>
+    <div className={styles.contact}>
+      <h3>VahanXpert Services</h3>
+      <p>
+        D-29, Vibhuti Khand, Gomti Nagar, Lucknow, Uttar Pradesh – 226010
+      </p>
+      <p>
+        <strong>Email: </strong>
+        <a href="mailto:info.vahanxpert@gmail.com">
+          info.vahanxpert@gmail.com
+        </a>
+      </p>
+      <p>
+        <strong>Mobile: </strong>
+        <a href="tel:+918930293896">+91 8930293896</a>
+      </p>
+    </div>
+  </section>
 
-            <footer className={styles.documentFooter}>
-              VahanXpert Services | Workshop Fire Safety, Emergency Response
-              &amp; Evacuation Policy
-            </footer>
-          </article>
+  <section
+    className={`${styles.document} ${styles.section}`}
+    id="section-29"
+  >
+    <h2>29. Document Control</h2>
+
+    <div className={styles.tableWrap}>
+      <table>
+        <tbody>
+          <tr>
+            <th>Document Name</th>
+            <td>
+              Workshop Fire Safety, Emergency Response &amp; Evacuation Policy
+            </td>
+          </tr>
+          <tr>
+            <th>Organisation</th>
+            <td>VahanXpert Services</td>
+          </tr>
+          <tr>
+            <th>Policy Number</th>
+            <td>VXS/FSE/032</td>
+          </tr>
+          <tr>
+            <th>Version / Effective Date</th>
+            <td>1.0 / 20/09/2026</td>
+          </tr>
+          <tr>
+            <th>Review Frequency</th>
+            <td>
+              At least annually or whenever premises/fire-safety requirements
+              change
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer className={styles.documentFooter}>
+    VahanXpert Services | Workshop Fire Safety, Emergency Response &amp;
+    Evacuation Policy
+  </footer>
+</div>
+
         </div>
       </div>
     </div>
