@@ -39,6 +39,7 @@ export interface CardNavProps {
   logo?: string | ReactNode;
   logoAlt?: string;
   logoHref?: string;
+  logoHeight?: number | string;
   items?: CardNavItem[];
   cta?: CardNavCta;
   theme?: 'dark' | 'light';
@@ -196,6 +197,7 @@ const CardNav = ({
   logo,
   logoAlt = 'Logo',
   logoHref = '#',
+  logoHeight = 44,
   items = DEFAULT_ITEMS,
   cta,
   theme = 'dark',
@@ -251,11 +253,11 @@ const CardNav = ({
   const vars: Record<string, string> = {
     ...palette,
     '--cn-max': `${maxWidth}px`,
-    '--cn-bar': '60px',
+    '--cn-bar': '64px',
     '--cn-inset': '8px',
     '--cn-gap': '8px',
     '--cn-radius': '18px',
-    '--cn-logo': '24px',
+    '--cn-logo': typeof logoHeight === 'number' ? `${logoHeight}px` : logoHeight,
     '--cn-card': `${cardHeight}px`
   };
   if (surface === 'glass') vars['--cn-blur'] = 'blur(20px) saturate(1.6)';

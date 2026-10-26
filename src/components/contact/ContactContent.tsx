@@ -12,13 +12,23 @@ import {
   CheckCircle2,
   ExternalLink,
 } from 'lucide-react';
+import CustomDropdown, { type DropdownOption } from '@/components/ui/CustomDropdown';
 import styles from './ContactPage.module.css';
 
+const SERVICE_OPTIONS: DropdownOption[] = [
+  { value: 'Car Service & Maintenance', label: 'Car Service & Maintenance' },
+  { value: 'Accident Repair', label: 'Accident Repair' },
+  { value: 'Insurance Claims Assistance', label: 'Insurance Claims Assistance' },
+  { value: 'Car Detailing', label: 'Car Detailing' },
+  { value: 'Diagnostics & Inspection', label: 'Diagnostics & Inspection' },
+  { value: 'Other Assistance', label: 'Other Assistance' },
+];
+
 const MAP_URL =
-  'https://maps.google.com/?cid=7884883098814316887&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF';
+  'https://www.google.com/maps/place/VAHANXPERT/@29.18732,74.7559444,17z/data=!3m1!4b1!4m6!3m5!1s0x39141d6f9291daa9:0x6d6cbb67084f0157!8m2!3d29.18732!4d74.7585193!16s%2Fg%2F11nr3f8bpv?entry=ttu';
 
 const MAP_EMBED_URL =
-  'https://maps.google.com/maps?q=cid:7884883098814316887&t=&z=15&ie=UTF8&iwloc=&output=embed';
+  'https://maps.google.com/maps?q=VAHANXPERT,+Sahwa+Bypass,+near+Shubham+Hospital,+Nohar,+Rajasthan+335523&t=&z=16&ie=UTF8&iwloc=B&output=embed';
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -252,30 +262,16 @@ export default function ContactContent() {
                       <label htmlFor="service" className={styles.formLabel}>
                         Service
                       </label>
-                      <select
+                      <CustomDropdown
                         id="service"
                         name="service"
                         required
+                        options={SERVICE_OPTIONS}
                         value={formData.service}
-                        onChange={handleChange}
-                        className={styles.selectField}
-                      >
-                        <option value="" disabled>
-                          Select service
-                        </option>
-                        <option value="Car Service & Maintenance">
-                          Car Service & Maintenance
-                        </option>
-                        <option value="Accident Repair">Accident Repair</option>
-                        <option value="Insurance Claims Assistance">
-                          Insurance Claims Assistance
-                        </option>
-                        <option value="Car Detailing">Car Detailing</option>
-                        <option value="Diagnostics & Inspection">
-                          Diagnostics & Inspection
-                        </option>
-                        <option value="Other Assistance">Other Assistance</option>
-                      </select>
+                        onChange={(val) => setFormData((prev) => ({ ...prev, service: val }))}
+                        placeholder="Select service"
+                        accentColor="amber"
+                      />
                     </div>
                   </div>
 

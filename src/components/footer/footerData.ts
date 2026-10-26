@@ -32,13 +32,14 @@ export const footerColumns: FooterColumn[] = [
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms & Conditions', href: '/terms' },
       { label: 'Custody & Parking Policy', href: '/parking-custody-policy' },
+      { label: 'Delete Account', href: '/delete-account' },
     ],
   },
 ];
 
 export const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com', icon: 'linkedin' },
-  { name: 'Instagram', href: 'https://instagram.com', icon: 'instagram' },
-  { name: 'YouTube', href: 'https://youtube.com', icon: 'youtube' },
-  { name: 'Facebook', href: 'https://facebook.com', icon: 'facebook' },
+  { name: 'Instagram', href: 'https://www.instagram.com/vahanxpert_nohar/', icon: 'instagram' },
+  { name: 'Facebook', href: 'https://www.instagram.com/vahanxpert_nohar/', icon: 'facebook' },
+  { name: 'YouTube', href: 'https://www.instagram.com/vahanxpert_nohar/', icon: 'youtube' },
+  { name: 'LinkedIn', href: 'https://www.instagram.com/vahanxpert_nohar/', icon: 'linkedin' },
 ];

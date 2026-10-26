@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { HugeiconsIcon } from '@hugeicons/react';
 import { Share01Icon, ArrowRight01Icon } from '@hugeicons/core-free-icons';
 import SpotlightCard from './SpotlightCard';
@@ -103,12 +104,12 @@ export default function ServiceCard({ service, className = '' }: ServiceCardProp
           <div className={styles.divider} />
 
           {/* Bottom Action Row: CTA Text & Golden Circle Arrow Button */}
-          <div className={styles.bottomRow}>
+          <Link href={service.ctaHref ?? '/services'} className={styles.bottomRow}>
             <span className={styles.ctaText}>{service.ctaText ?? 'View Service'}</span>
             <div className={styles.arrowButton} aria-hidden="true">
               <HugeiconsIcon className={styles.arrowIcon} icon={ArrowRight01Icon} size={20} strokeWidth={2.5} />
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </SpotlightCard>

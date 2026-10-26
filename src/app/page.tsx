@@ -12,7 +12,7 @@ import Footer from '@/components/footer/Footer';
 export default function Home() {
   return (
     <>
-      <SplashScreen />
+      <SplashScreen duration={3000} />
       <Navbar />
       <main>
         <HeroSection />

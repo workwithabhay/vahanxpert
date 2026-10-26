@@ -383,8 +383,9 @@ export default function PaymentBillingPolicyContent() {
                 <span className={styles.contactLabel}>Workshop Address</span>
                 <span className={styles.contactValue}>
                   VahanXpert Services<br />
-                  D-29, Vibhuti Khand, Gomti Nagar,<br />
-                  Lucknow, Uttar Pradesh – 226010
+                  Ward No. 02, Shop No. 01, Khata, 23/20,<br />
+                  Sahwa Bypass, near Shubham Hospital,<br />
+                  Nohar, Rajasthan – 335523
                 </span>
               </div>
 

@@ -13,6 +13,33 @@
   user-select: none;
 }
 
+.skipBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  background: rgba(24, 24, 27, 0.04);
+  border: 1px solid rgba(24, 24, 27, 0.08);
+  color: #71717a;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+}
+
+.skipBtn:hover {
+  background: rgba(245, 158, 11, 0.1);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.3);
+  transform: translateX(1px);
+}
+
 /* Subtle soft ambient glow matching the white theme */
 .ambientGlow {
   position: absolute;

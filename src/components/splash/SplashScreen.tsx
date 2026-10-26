@@ -6,35 +6,28 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import styles from './SplashScreen.module.css';
 
 interface SplashScreenProps {
-  /** Duration in milliseconds before auto-dismiss (default: 2000ms) */
+  /** Duration in milliseconds before auto-dismiss (default: 3500ms, in the 3-5s range) */
   duration?: number;
   /** Callback fired when splash screen finishes exiting */
   onFinish?: () => void;
 }
 
+const emptySubscribe = () => () => {};
+
 export default function SplashScreen({
-  duration = 2000,
+  duration = 3500,
   onFinish,
 }: SplashScreenProps) {
-  const [mounted, setMounted] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const isMounted = React.useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
+  const [isVisible, setIsVisible] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Check if splash screen has already been shown in this session (e.g. on page refresh)
-    try {
-      const alreadyShown = sessionStorage.getItem('vahanxpert_splash_shown');
-      if (alreadyShown) {
-        if (onFinish) onFinish();
-        return;
-      }
-      sessionStorage.setItem('vahanxpert_splash_shown', 'true');
-    } catch {
-      // In case storage is inaccessible
-    }
-
-    setMounted(true);
-    setIsVisible(true);
+    if (!isMounted) return;
 
     // Car start ignition sound effect
     let audio: HTMLAudioElement | null = null;
@@ -70,8 +63,23 @@ export default function SplashScreen({
     document.body.style.overflow = 'hidden';
 
     const intervalTime = 25;
-    const totalSteps = duration / intervalTime;
+    const totalSteps = Math.max(1, duration / intervalTime);
     let currentStep = 0;
+
+    const stopAudio = () => {
+      if (audio) {
+        const currentAudio = audio;
+        fadeInterval = setInterval(() => {
+          if (currentAudio.volume > 0.1) {
+            currentAudio.volume = Math.max(0, currentAudio.volume - 0.15);
+          } else {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            if (fadeInterval) clearInterval(fadeInterval);
+          }
+        }, 50);
+      }
+    };
 
     const timer = setInterval(() => {
       currentStep += 1;
@@ -80,25 +88,12 @@ export default function SplashScreen({
 
       if (currentStep >= totalSteps) {
         clearInterval(timer);
-
-        // Smoothly fade out audio as splash fades out
-        if (audio) {
-          const currentAudio = audio;
-          fadeInterval = setInterval(() => {
-            if (currentAudio.volume > 0.1) {
-              currentAudio.volume = Math.max(0, currentAudio.volume - 0.15);
-            } else {
-              currentAudio.pause();
-              currentAudio.currentTime = 0;
-              if (fadeInterval) clearInterval(fadeInterval);
-            }
-          }, 60);
-        }
+        stopAudio();
 
         setTimeout(() => {
           setIsVisible(false);
           document.body.style.overflow = '';
-        }, 150);
+        }, 100);
       }
     }, intervalTime);
 
@@ -111,9 +106,14 @@ export default function SplashScreen({
         audio.currentTime = 0;
       }
     };
-  }, [duration]);
+  }, [duration, isMounted]);
 
-  if (!mounted) return null;
+  if (!isMounted) return null;
+
+  const handleSkip = () => {
+    setIsVisible(false);
+    document.body.style.overflow = '';
+  };
 
   return (
     <AnimatePresence
@@ -132,6 +132,8 @@ export default function SplashScreen({
           }}
           aria-hidden={!isVisible}
         >
+         
+
           <div className={styles.ambientGlow} />
 
           <motion.div

@@ -9,10 +9,11 @@ export default function JsonLd() {
     name: 'VahanXpert - Multi-Brand Car Service & Cashless Insurance Claim Workshop',
     alternateName: 'VahanXpert Nohar',
     image: [
-      'https://www.vahanxpert.in/logo.png',
+      'https://www.vahanxpert.in/headerlogo.png',
       'https://www.vahanxpert.in/mechanic-vw.png',
     ],
     url: 'https://www.vahanxpert.in',
+    sameAs: ['https://www.instagram.com/vahanxpert_nohar/'],
     telephone: '+91-8930293896',
     email: 'support@vahanxpert.in',
     priceRange: '₹₹',
@@ -124,7 +125,7 @@ export default function JsonLd() {
       '@type': 'Organization',
       name: 'VahanXpert Services',
       url: 'https://www.vahanxpert.in',
-      logo: 'https://www.vahanxpert.in/logo.png',
+      logo: 'https://www.vahanxpert.in/headerlogo.png',
     },
   };
 
