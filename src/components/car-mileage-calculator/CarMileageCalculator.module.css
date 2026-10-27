@@ -362,7 +362,7 @@
 
 .mileageCard .resultIcon {
   color: #168357;
-  background: #d4f7e4;
+  background: #ffe5ca;
 }
 
 .fuelCard .resultIcon {
@@ -372,12 +372,12 @@
 
 .costCard .resultIcon {
   color: #7742aa;
-  background: #efd9ff;
+  background: #ffe5ca;
 }
 
 .tripCard .resultIcon {
   color: #2466ac;
-  background: #d3ebff;
+  background: #ffe5ca;
 }
 
 .howItWorks {
