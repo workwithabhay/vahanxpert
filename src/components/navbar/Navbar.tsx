@@ -56,7 +56,17 @@ export default function Navbar() {
     window.addEventListener('open-book-service-modal', handleOpen);
     return () => window.removeEventListener('open-book-service-modal', handleOpen);
   }, []);
+  useEffect(() => {
+  const openBookingModal = () => {
+    setIsModalOpen(true);
+  };
 
+  window.addEventListener("open-book-service", openBookingModal);
+
+  return () => {
+    window.removeEventListener("open-book-service", openBookingModal);
+  };
+}, []);
   return (
     <>
       <header

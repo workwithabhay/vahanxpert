@@ -80,7 +80,7 @@ export default function CarMileageCalculator() {
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <span className={styles.eyebrow}>⚡ Free Tool</span>
+          {/* <span className={styles.eyebrow}>⚡ Free Tool</span> */}
 
           <h1>
             Car <span>Mileage</span> Calculator

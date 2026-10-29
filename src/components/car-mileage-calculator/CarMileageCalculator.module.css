@@ -15,10 +15,11 @@
 }
 
 .hero {
+  
   position: relative;
   overflow: hidden;
   min-height: 320px;
-  padding: 45px 6% 70px;
+  padding: 75px 6% 70px;
   color: #fff;
   background:
     radial-gradient(ellipse at 75% 30%, rgba(54, 126, 180, 0.5), transparent 38%),
